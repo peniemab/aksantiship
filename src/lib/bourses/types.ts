@@ -34,9 +34,15 @@ export interface BoursesQueryParams {
   niveauEtudes?: EducationLevel;
   matchOnly?: boolean;
   includeMatch?: boolean;
+  q?: string;
+  pays?: string;
+  cycle?: StudyCycle | "all";
 }
 
 export interface BourseRepositoryQuery {
   status?: ScholarshipStatus;
   featured?: boolean;
+  q?: string;
+  pays?: string;
+  cycle?: StudyCycle | "all";
 }

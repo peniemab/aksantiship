@@ -11,6 +11,9 @@ function toSearchParams(params: BoursesQueryParams): string {
   if (params.niveauEtudes) sp.set("niveauEtudes", params.niveauEtudes);
   if (params.matchOnly) sp.set("matchOnly", "true");
   if (params.includeMatch) sp.set("includeMatch", "true");
+  if (params.q) sp.set("q", params.q);
+  if (params.pays) sp.set("pays", params.pays);
+  if (params.cycle) sp.set("cycle", params.cycle);
   return sp.toString();
 }
 

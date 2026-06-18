@@ -3,12 +3,15 @@
 import { Alert, Button, FormField, Input } from "@/components/ui/Form";
 import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, Suspense } from "react";
+import { safeRedirect } from "@/lib/navigation";
 
-export default function ConnexionPage() {
+function ConnexionForm() {
   const { login } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = safeRedirect(searchParams.get("redirect"));
   const [error, setError] = useState("");
   const [form, setForm] = useState({ email: "", password: "" });
 
@@ -20,12 +23,17 @@ export default function ConnexionPage() {
       setError(err);
       return;
     }
-    router.push("/");
+    router.push(redirectTo);
   };
 
   return (
     <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
       <h1 className="text-2xl font-extrabold text-foreground">Se connecter</h1>
+      {redirectTo !== "/" && (
+        <p className="mt-2 text-sm text-muted">
+          Connectez-vous pour accéder à la page demandée.
+        </p>
+      )}
 
       {error && <div className="mt-4"><Alert type="error">{error}</Alert></div>}
 
@@ -47,10 +55,27 @@ export default function ConnexionPage() {
 
       <p className="mt-6 text-center text-sm text-muted">
         Pas encore de compte ?{" "}
-        <Link href="/auth/inscription" className="font-semibold text-aksanti-red hover:underline">
+        <Link
+          href={redirectTo !== "/" ? `/auth/inscription?redirect=${encodeURIComponent(redirectTo)}` : "/auth/inscription"}
+          className="font-semibold text-aksanti-red hover:underline"
+        >
           Créer un compte
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function ConnexionPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+          <p className="text-sm text-muted">Chargement...</p>
+        </div>
+      }
+    >
+      <ConnexionForm />
+    </Suspense>
   );
 }

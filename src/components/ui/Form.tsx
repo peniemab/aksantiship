@@ -15,7 +15,7 @@ export function FormField({
   children,
 }: FieldProps & { children: React.ReactNode }) {
   return (
-    <div className="space-y-1.5">
+    <div className="min-w-0 space-y-1.5">
       <label className="block text-sm font-medium text-foreground">
         {label}
         {required && <span className="text-aksanti-red"> *</span>}
@@ -27,19 +27,29 @@ export function FormField({
   );
 }
 
+/** text-base (16px) évite le zoom automatique iOS/Android au focus */
 const inputClass =
-  "w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none transition focus:border-aksanti-red focus:ring-2 focus:ring-aksanti-red/20 disabled:bg-surface disabled:text-muted";
+  "box-border w-full min-w-0 max-w-full rounded-xl border border-border bg-white px-4 py-3 text-base outline-none transition focus:border-aksanti-red focus:ring-2 focus:ring-aksanti-red/20 disabled:bg-surface disabled:text-muted";
 
-export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={inputClass} {...props} />;
+export function Input({
+  className = "",
+  ...props
+}: InputHTMLAttributes<HTMLInputElement>) {
+  return <input className={`${inputClass} ${className}`.trim()} {...props} />;
 }
 
-export function Select(props: SelectHTMLAttributes<HTMLSelectElement>) {
-  return <select className={inputClass} {...props} />;
+export function Select({
+  className = "",
+  ...props
+}: SelectHTMLAttributes<HTMLSelectElement>) {
+  return <select className={`${inputClass} ${className}`.trim()} {...props} />;
 }
 
-export function Textarea(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea className={inputClass} {...props} />;
+export function Textarea({
+  className = "",
+  ...props
+}: TextareaHTMLAttributes<HTMLTextAreaElement>) {
+  return <textarea className={`${inputClass} ${className}`.trim()} {...props} />;
 }
 
 export function Button({

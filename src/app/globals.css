@@ -34,3 +34,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-plus-jakarta), system-ui, sans-serif;
 }
+
+/* Champs formulaire : même largeur, pas de débordement (surtout date sur mobile) */
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+input[type="date"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  -webkit-min-logical-width: 0;
+}

@@ -56,7 +56,7 @@ export function HomeContent() {
                 href="/auth/inscription"
                 className="mt-6 inline-flex rounded-full bg-aksanti-red px-6 py-3 text-sm font-bold text-white transition hover:bg-aksanti-red-dark"
               >
-                Étape 1 — Créer un compte
+                Étape 1 : Créer un compte
               </Link>
             </div>
 
@@ -97,7 +97,7 @@ export function HomeContent() {
             Nos meilleures offres disponibles
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
-            Découvrez une sélection de bourses internationales populaires — chargées via notre
+            Découvrez une sélection de bourses internationales populaires, chargées via notre
             API interne, prête pour la base de données.
           </p>
 
@@ -134,14 +134,30 @@ export function HomeContent() {
 
       <section className="bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-extrabold text-foreground">
-            3 fonctionnalités principales
+          <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl">
+            Votre bourse idéale, en 3 étapes simples
           </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-muted">
+            Plus besoin de parcourir des centaines d&apos;offres inadaptées. Aksantiship vous guide
+            vers les opportunités qui correspondent vraiment à votre profil.
+          </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {[
-              { step: "1", title: "Analyser le profil", desc: "Déterminez votre niveau international (Bachelor, Master, PhD) et vos cycles éligibles." },
-              { step: "2", title: "Filtrer les opportunités", desc: "Seules les bourses compatibles avec votre niveau s'affichent — pas de Master pour un Bachelier." },
-              { step: "3", title: "Organiser par disponibilité", desc: "En cours, en attente d'ouverture, ou fermées." },
+              {
+                step: "1",
+                title: "On connaît votre profil",
+                desc: "Bachelor, Master, PhD. On identifie votre niveau et les bourses réellement accessibles pour vous.",
+              },
+              {
+                step: "2",
+                title: "Seulement ce qui vous correspond",
+                desc: "Pas de bourse Master si vous venez d'obtenir votre bac. Chaque opportunité est alignée sur votre parcours.",
+              },
+              {
+                step: "3",
+                title: "Ne ratez plus aucune chance",
+                desc: "Bourses en cours, à venir ou closes. Tout est clair, à jour, au même endroit.",
+              },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl border border-border bg-white p-6">
                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-aksanti-red to-ship-orange text-sm font-bold text-white">

@@ -1,13 +1,15 @@
 "use client";
 
 import { RequireAuth } from "@/components/RequireAuth";
+import { BourseSearchFilters } from "@/components/BourseSearchFilters";
 import { ScholarshipCard } from "@/components/ScholarshipCard";
 import { ProfileAnalysisCard } from "@/components/ProfileAnalysisCard";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
+import { filterScholarshipsBySearch, hasActiveBourseFilters } from "@/lib/bourses/filters";
+import { listScholarshipCountries } from "@/lib/bourses/repository";
 import { analyzeProfile, filterScholarshipsForProfile } from "@/lib/matching";
-import type { BourseWithMatch } from "@/lib/bourses/types";
-import type { ScholarshipStatus } from "@/lib/types";
+import type { ScholarshipStatus, StudyCycle } from "@/lib/types";
 import { useAuth } from "@/context/AuthContext";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -20,10 +22,15 @@ const tabs: { key: ScholarshipStatus; label: string }[] = [
   { key: "fermee", label: "Bourses fermées" },
 ];
 
+const countries = listScholarshipCountries();
+
 function OpportunitiesContent() {
   const { profile } = useAuth();
   const [activeTab, setActiveTab] = useState<ScholarshipStatus>("encours");
   const [showAnalysis, setShowAnalysis] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [paysFilter, setPaysFilter] = useState("all");
+  const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
 
   const { bourses, meta, loading, error } = useBourses(
     profile
@@ -39,36 +46,51 @@ function OpportunitiesContent() {
     [profile, bourses],
   );
 
+  const profileMatches = useMemo(() => {
+    if (!profile) return [];
+    return filterScholarshipsForProfile(profile, bourses, { onlyMatches: true });
+  }, [profile, bourses]);
+
+  const searchFilteredMatches = useMemo(() => {
+    const scholarships = profileMatches.map((m) => m.scholarship);
+    const filtered = filterScholarshipsBySearch(scholarships, {
+      query: searchQuery,
+      pays: paysFilter,
+      cycle: cycleFilter,
+    });
+    const ids = new Set(filtered.map((s) => s.id));
+    return profileMatches.filter((m) => ids.has(m.scholarship.id));
+  }, [profileMatches, searchQuery, paysFilter, cycleFilter]);
+
   const tabCounts = useMemo(() => {
-    if (!profile || !bourses.length) return {} as Record<ScholarshipStatus, number>;
     const counts: Record<ScholarshipStatus, number> = {
       encours: 0,
       a_venir: 0,
       fermee: 0,
     };
-    for (const b of bourses) {
-      const withMatch = b as BourseWithMatch;
-      if (withMatch.match?.matches) {
-        counts[b.status] += 1;
-      }
+    for (const m of searchFilteredMatches) {
+      counts[m.scholarship.status] += 1;
     }
     return counts;
-  }, [profile, bourses]);
+  }, [searchFilteredMatches]);
 
-  const matchedForTab = useMemo(() => {
-    if (!profile) return [];
-    return filterScholarshipsForProfile(profile, bourses, {
-      status: activeTab,
-      onlyMatches: true,
-    });
-  }, [profile, bourses, activeTab]);
+  const matchedForTab = useMemo(
+    () => searchFilteredMatches.filter((m) => m.scholarship.status === activeTab),
+    [searchFilteredMatches, activeTab],
+  );
+
+  const resetSearch = () => {
+    setSearchQuery("");
+    setPaysFilter("all");
+    setCycleFilter("all");
+  };
 
   if (!profile) {
     return (
       <div>
         <h1 className="text-3xl font-extrabold text-foreground">Mes Opportunités</h1>
         <p className="mt-2 text-muted">
-          Fonctionnalité 2 & 3 — Filtrage et organisation des bourses selon votre profil.
+          Fonctionnalité 2 & 3 : filtrage et organisation des bourses selon votre profil.
         </p>
         <div className="mt-6 space-y-4">
           <Alert type="info">
@@ -80,13 +102,21 @@ function OpportunitiesContent() {
     );
   }
 
+  const hasSearchFilters = hasActiveBourseFilters({
+    query: searchQuery,
+    pays: paysFilter,
+    cycle: cycleFilter,
+  });
+
   return (
     <div>
       <h1 className="text-3xl font-extrabold text-foreground">Mes Opportunités</h1>
       <p className="mt-2 text-muted">
         {loading
           ? "Chargement des bourses..."
-          : `${matchedForTab.length} bourse${matchedForTab.length > 1 ? "s" : ""} compatible${matchedForTab.length > 1 ? "s" : ""} — ${analysis?.niveauLabel ?? ""}`}
+          : hasSearchFilters
+            ? `${searchFilteredMatches.length} bourse${searchFilteredMatches.length > 1 ? "s" : ""} trouvée${searchFilteredMatches.length > 1 ? "s" : ""} sur ${profileMatches.length} compatible${profileMatches.length > 1 ? "s" : ""} (${analysis?.niveauLabel ?? ""})`
+            : `${profileMatches.length} bourse${profileMatches.length > 1 ? "s" : ""} compatible${profileMatches.length > 1 ? "s" : ""} pour votre niveau (${analysis?.niveauLabel ?? ""})`}
       </p>
 
       {error && (
@@ -95,19 +125,31 @@ function OpportunitiesContent() {
         </div>
       )}
 
-      {meta?.excluded !== undefined && meta.excluded > 0 && (
+      {meta?.excluded !== undefined && meta.excluded > 0 && !hasSearchFilters && (
         <div className="mt-4">
           <Alert type="info">
-            {meta.excluded} bourse{meta.excluded > 1 ? "s" : ""} masquée{meta.excluded > 1 ? "s" : ""} —
+            {meta.excluded} bourse{meta.excluded > 1 ? "s" : ""} masquée{meta.excluded > 1 ? "s" : ""},
             incompatible{meta.excluded > 1 ? "s" : ""} avec votre niveau d&apos;études.
           </Alert>
         </div>
       )}
 
+      <BourseSearchFilters
+        query={searchQuery}
+        pays={paysFilter}
+        cycle={cycleFilter}
+        countries={countries}
+        resultCount={searchFilteredMatches.length}
+        onQueryChange={setSearchQuery}
+        onPaysChange={setPaysFilter}
+        onCycleChange={setCycleFilter}
+        onReset={resetSearch}
+      />
+
       <button
         type="button"
         onClick={() => setShowAnalysis(!showAnalysis)}
-        className="mt-4 text-sm font-semibold text-aksanti-red hover:underline"
+        className="mt-6 text-sm font-semibold text-aksanti-red hover:underline"
       >
         {showAnalysis ? "Masquer" : "Afficher"} l&apos;analyse du profil
       </button>
@@ -148,9 +190,22 @@ function OpportunitiesContent() {
           ))}
         </div>
       ) : (
-        <p className="mt-8 text-center text-muted">
-          Aucune bourse compatible dans cette catégorie pour votre niveau d&apos;études.
-        </p>
+        <div className="mt-8 text-center">
+          <p className="text-muted">
+            {hasSearchFilters
+              ? "Aucune bourse ne correspond à votre recherche dans cette catégorie."
+              : "Aucune bourse compatible dans cette catégorie pour votre niveau d'études."}
+          </p>
+          {hasSearchFilters && (
+            <button
+              type="button"
+              onClick={resetSearch}
+              className="mt-3 text-sm font-semibold text-aksanti-red hover:underline"
+            >
+              Réinitialiser les filtres
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

@@ -3,12 +3,15 @@
 import { Alert, Button, FormField, Input } from "@/components/ui/Form";
 import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, Suspense } from "react";
+import { safeRedirect } from "@/lib/navigation";
 
-export default function InscriptionPage() {
+function InscriptionForm() {
   const { register } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = safeRedirect(searchParams.get("redirect"));
   const [error, setError] = useState("");
   const [form, setForm] = useState({
     nom: "",
@@ -85,10 +88,31 @@ export default function InscriptionPage() {
 
       <p className="mt-6 text-center text-sm text-muted">
         Déjà inscrit ?{" "}
-        <Link href="/auth/connexion" className="font-semibold text-aksanti-red hover:underline">
+        <Link
+          href={
+            redirectTo !== "/"
+              ? `/auth/connexion?redirect=${encodeURIComponent(redirectTo)}`
+              : "/auth/connexion"
+          }
+          className="font-semibold text-aksanti-red hover:underline"
+        >
           Se connecter
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function InscriptionPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+          <p className="text-sm text-muted">Chargement...</p>
+        </div>
+      }
+    >
+      <InscriptionForm />
+    </Suspense>
   );
 }

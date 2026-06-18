@@ -132,7 +132,7 @@ export function analyzeProfile(
   }
   if (EDUCATION_LEVEL_RANK[niveau] < 4) {
     recommendations.push(
-      "Les bourses Master et Doctorat nécessitent au minimum une Licence/Bachelor — concentrez-vous sur les bourses Undergraduate.",
+      "Les bourses Master et Doctorat nécessitent au minimum une Licence/Bachelor. Concentrez-vous sur les bourses Undergraduate.",
     );
   }
 

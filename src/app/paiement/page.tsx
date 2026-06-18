@@ -32,17 +32,17 @@ function PaymentContent() {
 
   const labels: Record<string, { title: string; price: number; desc: string }> = {
     profil: {
-      title: "Paiement — Enregistrement du profil",
+      title: "Paiement : enregistrement du profil",
       price: SUBSCRIPTION_PRICE_USD,
       desc: "Finalisez votre abonnement pour enregistrer votre profil.",
     },
     abonnement: {
-      title: "Paiement — Abonnement annuel",
+      title: "Paiement : abonnement annuel",
       price: SUBSCRIPTION_PRICE_USD,
       desc: "Souscrivez à l'abonnement pour accéder à toutes les fonctionnalités.",
     },
     accompagnement: {
-      title: `Paiement — Accompagnement${accompagnement ? ` (${accompagnement.bourseNom})` : ""}`,
+      title: `Paiement : accompagnement${accompagnement ? ` (${accompagnement.bourseNom})` : ""}`,
       price: ACCOMPANIMENT_PRICE_USD,
       desc: "Finalisez le paiement pour valider votre demande d'accompagnement.",
     },
@@ -124,7 +124,7 @@ function PaymentContent() {
         <p className="text-sm text-muted">Montant à payer</p>
         <p className="mt-2 text-4xl font-extrabold text-aksanti-red">${info.price}</p>
         <p className="mt-2 text-xs text-muted">
-          Mode démo — aucun paiement réel ne sera effectué.
+          Mode démo. Aucun paiement réel ne sera effectué.
         </p>
       </div>
 

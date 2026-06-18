@@ -15,6 +15,9 @@ import { NextResponse } from "next/server";
  * - niveauEtudes : finaliste | bachelor | … — pour le matching profil
  * - matchOnly    : true — uniquement les bourses compatibles (nécessite niveauEtudes)
  * - includeMatch : true — ajoute score/raison sur chaque bourse
+ * - q            : recherche texte (nom, pays, niveaux, avantages)
+ * - pays         : filtre par pays hôte
+ * - cycle        : undergraduate | master | doctorate
  */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -24,6 +27,15 @@ export async function GET(request: Request) {
   const niveauEtudes = parseEducationLevelParam(searchParams.get("niveauEtudes"));
   const matchOnly = searchParams.get("matchOnly") === "true";
   const includeMatch = searchParams.get("includeMatch") === "true";
+  const q = searchParams.get("q") ?? undefined;
+  const pays = searchParams.get("pays") ?? undefined;
+  const cycleParam = searchParams.get("cycle");
+  const cycle =
+    cycleParam === "undergraduate" ||
+    cycleParam === "master" ||
+    cycleParam === "doctorate"
+      ? cycleParam
+      : undefined;
 
   if (matchOnly && !niveauEtudes) {
     return NextResponse.json(
@@ -38,6 +50,9 @@ export async function GET(request: Request) {
     niveauEtudes,
     matchOnly,
     includeMatch: includeMatch || matchOnly,
+    q,
+    pays,
+    cycle,
   });
 
   const response: BoursesListResponse = { data, meta };

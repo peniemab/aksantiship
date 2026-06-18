@@ -82,7 +82,7 @@ function AccompanimentForm() {
           >
             <option value="">{loading ? "Chargement..." : "Choisir une bourse..."}</option>
             {bourses.map((s) => (
-              <option key={s.id} value={s.id}>{s.nom} — {s.paysHote}</option>
+              <option key={s.id} value={s.id}>{s.nom}, {s.paysHote}</option>
             ))}
           </Select>
         </FormField>

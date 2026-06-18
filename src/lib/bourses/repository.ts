@@ -1,5 +1,6 @@
 import { SCHOLARSHIPS, FEATURED_SCHOLARSHIP_IDS } from "@/lib/data/scholarships";
 import type { Scholarship } from "@/lib/types";
+import { filterScholarshipsBySearch } from "./filters";
 import type { BourseRepositoryQuery } from "./types";
 
 /**
@@ -20,7 +21,19 @@ export function listBourses(query: BourseRepositoryQuery = {}): Scholarship[] {
     results = results.filter((s) => s.status === query.status);
   }
 
+  results = filterScholarshipsBySearch(results, {
+    query: query.q,
+    pays: query.pays,
+    cycle: query.cycle,
+  });
+
   return results.sort((a, b) => a.dateCloture.localeCompare(b.dateCloture));
+}
+
+export function listScholarshipCountries(): string[] {
+  return [...new Set(SCHOLARSHIPS.map((s) => s.paysHote))].sort((a, b) =>
+    a.localeCompare(b, "fr"),
+  );
 }
 
 export function getBourseById(id: string): Scholarship | undefined {

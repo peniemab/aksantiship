@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Aksantiship — Portail de bourses d'études",
+  title: "Aksantiship : portail de bourses d'études",
   description:
     "Aksantiship t'accompagne pas à pas dans la recherche d'une opportunité pour financer tes études à l'international.",
 };

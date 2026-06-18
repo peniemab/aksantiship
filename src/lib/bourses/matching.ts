@@ -24,7 +24,7 @@ export function matchScholarshipToEducationLevel(
       matches: false,
       matchingCycles: [],
       score: 0,
-      reason: `Cycle incompatible — requis : ${required}. Votre niveau : ${getEducationLevelLabel(niveauEtudes)}.`,
+      reason: `Cycle incompatible. Requis : ${required}. Votre niveau : ${getEducationLevelLabel(niveauEtudes)}.`,
     };
   }
 

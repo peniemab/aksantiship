@@ -42,6 +42,8 @@ const emptyForm = {
   documents: [] as string[],
 };
 
+const PROFILE_BLOCK_INSET = "mx-1 sm:mx-1.5";
+
 function ProfileForm() {
   const { user, profile, hasActiveSubscription, savePendingProfile } = useAuth();
   const router = useRouter();
@@ -115,6 +117,11 @@ function ProfileForm() {
       return;
     }
 
+    if (!form.dateNaissance) {
+      setError("Veuillez indiquer votre date de naissance.");
+      return;
+    }
+
     if (
       !form.niveauEtudes ||
       !form.dernierDiplome ||
@@ -159,43 +166,52 @@ function ProfileForm() {
   const selectedLevel = EDUCATION_LEVEL_OPTIONS.find((o) => o.value === form.niveauEtudes);
 
   return (
-    <div className="rounded-2xl border border-border bg-white p-6 shadow-sm sm:p-8">
-      <div className="flex items-start gap-3 rounded-xl bg-blue-50 p-4 text-sm text-blue-900">
-        <span className="text-lg">ℹ️</span>
-        <div>
-          <p className="font-semibold">Compte ≠ Profil</p>
-          <p className="mt-1 text-blue-800/80">
-            Votre compte (<strong>{user?.email}</strong>) sert à vous connecter.
-            Ce formulaire crée votre <strong>profil candidat</strong> — il détermine quelles bourses
-            vous correspondent selon la norme internationale (Bachelor, Master, PhD).
-          </p>
+    <div className="min-w-0 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+      <div
+        className={`${PROFILE_BLOCK_INSET} mt-1.5 rounded-xl border-2 border-blue-200 bg-blue-50 px-4 py-8 sm:mt-2 sm:rounded-2xl sm:px-6 sm:py-10`}
+      >
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-2xl sm:h-14 sm:w-14 sm:text-3xl">
+            ℹ️
+          </span>
+          <div className="min-w-0 flex-1 space-y-3">
+            <p className="text-xl font-bold text-blue-900 sm:text-2xl">Compte ≠ Profil</p>
+            <p className="text-base leading-relaxed text-blue-800/90 sm:text-lg">
+              Votre compte (<strong className="font-semibold text-blue-900">{user?.email}</strong>) sert à vous connecter.
+            </p>
+            <p className="text-base leading-relaxed text-blue-800/90 sm:text-lg">
+              Ce formulaire crée votre <strong className="font-semibold text-blue-900">profil candidat</strong> , c'est lui qui détermine quelles bourses
+              vous correspondent (Bachelor, Master, PhD).
+            </p>
+          </div>
         </div>
       </div>
 
-      <h1 className="mt-6 text-2xl font-extrabold text-foreground">
-        {isEditing ? "Mon profil candidat" : "Étape 2 — Créer mon profil"}
-      </h1>
-      <p className="mt-2 text-sm text-muted">
-        Renseignez votre parcours scolaire. Le niveau d&apos;études pilote le filtrage des opportunités.
-      </p>
+      <div className={`${PROFILE_BLOCK_INSET} space-y-6 pb-6 pt-6 sm:pb-8`}>
+        <div>
+          <h1 className="text-2xl font-extrabold text-foreground">
+            {isEditing ? "Mon profil candidat" : "Étape 2 : Créer mon profil"}
+          </h1>
+          <p className="mt-2 text-sm text-muted">
+            Renseignez votre parcours scolaire. Le niveau d&apos;études pilote le filtrage des opportunités.
+          </p>
+        </div>
 
-      {isEditing && !canEdit && (
-        <div className="mt-4">
+        {isEditing && !canEdit && (
           <Alert type="warning">
             Mise à jour possible uniquement après 1 mois avec abonnement actif.{" "}
             {!hasActiveSubscription && (
               <Link href="/abonnement" className="font-semibold underline">Souscrire</Link>
             )}
           </Alert>
-        </div>
-      )}
+        )}
 
-      {error && <div className="mt-4"><Alert type="error">{error}</Alert></div>}
+        {error && <Alert type="error">{error}</Alert>}
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-6">
-        <fieldset className="space-y-4 rounded-xl border-2 border-ship-orange/30 bg-ship-orange/5 p-5">
+        <form onSubmit={handleSubmit} className="min-w-0 space-y-6 overflow-x-hidden">
+          <fieldset className="space-y-4 rounded-xl border-2 border-ship-orange/30 bg-ship-orange/5 p-4 sm:p-5">
           <legend className="px-2 text-sm font-bold text-ship-orange-dark">
-            Niveau d&apos;études — Norme internationale (critère principal de filtrage)
+            Niveau d&apos;études (critère principal de filtrage)
           </legend>
 
           <FormField label="Dernier diplôme obtenu" required>
@@ -233,9 +249,9 @@ function ProfileForm() {
           </FormField>
 
           <FormField
-            label="Niveau d'études actuel (norme internationale)"
+            label="Niveau d'études actuel"
             required
-            hint="Auto-suggéré selon diplôme et activité — modifiable si besoin"
+            hint="Auto-suggéré selon diplôme et activité, modifiable si besoin"
           >
             <Select
               value={form.niveauEtudes}
@@ -249,7 +265,7 @@ function ProfileForm() {
               <option value="">Sélectionner...</option>
               {EDUCATION_LEVEL_OPTIONS.map((o) => (
                 <option key={o.value} value={o.value}>
-                  {o.label} — {o.isced}
+                  {o.label}, {o.isced}
                 </option>
               ))}
             </Select>
@@ -257,12 +273,12 @@ function ProfileForm() {
 
           {selectedLevel && (
             <p className="rounded-lg bg-white px-4 py-3 text-sm text-muted">
-              <strong>{selectedLevel.label}</strong> — {selectedLevel.description}
+              <strong>{selectedLevel.label}</strong>. {selectedLevel.description}
             </p>
           )}
         </fieldset>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid min-w-0 gap-4 sm:grid-cols-3">
           <FormField label="Nom" required>
             <Input value={form.nom} onChange={(e) => setForm({ ...form, nom: e.target.value })} required disabled={!canEdit} />
           </FormField>
@@ -274,14 +290,16 @@ function ProfileForm() {
           </FormField>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <FormField label="Date de naissance" required>
-            <Input type="date" value={form.dateNaissance} onChange={(e) => setForm({ ...form, dateNaissance: e.target.value })} required disabled={!canEdit} />
-          </FormField>
-          <FormField label="Âge" hint="Calculé automatiquement">
-            <Input value={age !== null ? `${age} ans` : ""} disabled readOnly />
-          </FormField>
-        </div>
+        <FormField label="Date de naissance" required>
+          <Input
+            type="date"
+            value={form.dateNaissance}
+            onChange={(e) => setForm({ ...form, dateNaissance: e.target.value })}
+            required
+            disabled={!canEdit}
+            max={new Date().toISOString().split("T")[0]}
+          />
+        </FormField>
 
         {!isPrimary && (
           <>
@@ -330,7 +348,7 @@ function ProfileForm() {
         </FormField>
 
         {isTravailleur && (
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid min-w-0 gap-4 sm:grid-cols-2">
             <FormField label="Années d'expérience professionnelle" required>
               <Input type="number" min="0" value={form.anneesExperience} onChange={(e) => setForm({ ...form, anneesExperience: e.target.value })} required disabled={!canEdit} />
             </FormField>
@@ -378,7 +396,8 @@ function ProfileForm() {
             {isEditing ? "Mettre à jour et payer" : "Enregistrer mon profil et souscrire"}
           </Button>
         )}
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
@@ -388,7 +407,7 @@ export default function ProfilPage() {
     <>
       <Header />
       <main className="flex-1 bg-surface py-10">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl min-w-0 px-1 sm:px-2">
           <RequireAuth requireVerified>
             <ProfileForm />
           </RequireAuth>
