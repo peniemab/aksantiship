@@ -6,7 +6,7 @@ import { ScholarshipCard } from "@/components/ScholarshipCard";
 import { ProfileAnalysisCard } from "@/components/ProfileAnalysisCard";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
-import { filterScholarshipsBySearch, hasActiveBourseFilters } from "@/lib/bourses/filters";
+import { filterScholarshipsBySearch, hasActiveBourseFilters, sortScholarshipMatches, type BourseSortOption } from "@/lib/bourses/filters";
 import { listScholarshipCountries } from "@/lib/bourses/repository";
 import { analyzeProfile, filterScholarshipsForProfile } from "@/lib/matching";
 import type { ScholarshipStatus, StudyCycle } from "@/lib/types";
@@ -31,6 +31,7 @@ function OpportunitiesContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [paysFilter, setPaysFilter] = useState("all");
   const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
+  const [sortBy, setSortBy] = useState<BourseSortOption>("score_desc");
 
   const { bourses, meta, loading, error } = useBourses(
     profile
@@ -74,15 +75,16 @@ function OpportunitiesContent() {
     return counts;
   }, [searchFilteredMatches]);
 
-  const matchedForTab = useMemo(
-    () => searchFilteredMatches.filter((m) => m.scholarship.status === activeTab),
-    [searchFilteredMatches, activeTab],
-  );
+  const matchedForTab = useMemo(() => {
+    const forTab = searchFilteredMatches.filter((m) => m.scholarship.status === activeTab);
+    return sortScholarshipMatches(forTab, sortBy);
+  }, [searchFilteredMatches, activeTab, sortBy]);
 
   const resetSearch = () => {
     setSearchQuery("");
     setPaysFilter("all");
     setCycleFilter("all");
+    setSortBy("score_desc");
   };
 
   if (!profile) {
@@ -140,9 +142,12 @@ function OpportunitiesContent() {
         cycle={cycleFilter}
         countries={countries}
         resultCount={searchFilteredMatches.length}
+        showSort
+        sortBy={sortBy}
         onQueryChange={setSearchQuery}
         onPaysChange={setPaysFilter}
         onCycleChange={setCycleFilter}
+        onSortChange={setSortBy}
         onReset={resetSearch}
       />
 

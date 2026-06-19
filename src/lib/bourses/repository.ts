@@ -1,6 +1,7 @@
 import { SCHOLARSHIPS, FEATURED_SCHOLARSHIP_IDS } from "@/lib/data/scholarships";
 import type { Scholarship } from "@/lib/types";
 import { filterScholarshipsBySearch } from "./filters";
+import { slugToCountry } from "./countries";
 import type { BourseRepositoryQuery } from "./types";
 
 /**
@@ -44,6 +45,12 @@ export function countBourses(): number {
   return SCHOLARSHIPS.length;
 }
 
-export function getFeaturedIds(): string[] {
-  return [...FEATURED_SCHOLARSHIP_IDS];
+export function listBoursesByCountrySlug(slug: string): Scholarship[] {
+  const country = slugToCountry(slug);
+  if (!country) return [];
+  return listBourses({ pays: country });
+}
+
+export function countBoursesByCountry(country: string): number {
+  return SCHOLARSHIPS.filter((s) => s.paysHote === country).length;
 }

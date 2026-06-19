@@ -26,6 +26,9 @@ export function Footer() {
             <Link href="/" className="transition hover:text-white">
               Accueil
             </Link>
+            <Link href="/pays" className="transition hover:text-white">
+              Pays de destination
+            </Link>
             {APP_NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -38,7 +41,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="mt-8 text-center text-sm text-white/40">
-          © {new Date().getFullYear()} Aksantiship. Fait à Kinshasa. Tous droits réservés.
+          © {new Date().getFullYear()} Aksantiship. Tous droits réservés.
         </p>
       </div>
     </footer>

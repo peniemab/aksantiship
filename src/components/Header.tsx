@@ -121,6 +121,7 @@ export function Header() {
 
         <nav className="hidden flex-1 items-center justify-center gap-0.5 lg:flex">
           {renderNavLink("/", "Accueil")}
+          {renderNavLink("/pays", "Pays")}
           {APP_NAV_LINKS.map((link) => renderNavLink(link.href, link.label))}
         </nav>
 
@@ -286,6 +287,7 @@ export function Header() {
               )}
 
               {renderNavLink("/", "Accueil", { onNavigate: () => setMobileOpen(false), stack: true })}
+              {renderNavLink("/pays", "Pays", { onNavigate: () => setMobileOpen(false), stack: true })}
               {APP_NAV_LINKS.map((link) =>
                 renderNavLink(link.href, link.label, {
                   onNavigate: () => setMobileOpen(false),

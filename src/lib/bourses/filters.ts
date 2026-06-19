@@ -1,10 +1,20 @@
 import type { Scholarship, StudyCycle } from "@/lib/types";
+import type { ScholarshipMatch } from "@/lib/matching";
 
 export interface BourseSearchFilters {
   query?: string;
   pays?: string;
   cycle?: StudyCycle | "all";
 }
+
+export type BourseSortOption = "score_desc" | "date_asc" | "date_desc" | "name_asc";
+
+export const BOURSE_SORT_LABELS: Record<BourseSortOption, string> = {
+  score_desc: "Compatibilité (meilleure d'abord)",
+  date_asc: "Date de clôture (proche d'abord)",
+  date_desc: "Date de clôture (lointaine d'abord)",
+  name_asc: "Nom (A → Z)",
+};
 
 export function normalizeSearchQuery(query: string): string {
   return query.trim().toLowerCase();
@@ -41,4 +51,48 @@ export function hasActiveBourseFilters(filters: BourseSearchFilters): boolean {
       (filters.pays && filters.pays !== "all") ||
       (filters.cycle && filters.cycle !== "all"),
   );
+}
+
+export function sortScholarshipMatches(
+  matches: ScholarshipMatch[],
+  sortBy: BourseSortOption,
+): ScholarshipMatch[] {
+  const copy = [...matches];
+
+  switch (sortBy) {
+    case "score_desc":
+      return copy.sort((a, b) => b.score - a.score);
+    case "date_asc":
+      return copy.sort((a, b) =>
+        a.scholarship.dateCloture.localeCompare(b.scholarship.dateCloture),
+      );
+    case "date_desc":
+      return copy.sort((a, b) =>
+        b.scholarship.dateCloture.localeCompare(a.scholarship.dateCloture),
+      );
+    case "name_asc":
+      return copy.sort((a, b) =>
+        a.scholarship.nom.localeCompare(b.scholarship.nom, "fr"),
+      );
+    default:
+      return copy;
+  }
+}
+
+export function sortScholarships<T extends Pick<Scholarship, "nom" | "dateCloture">>(
+  scholarships: T[],
+  sortBy: Exclude<BourseSortOption, "score_desc"> | "name_asc" | "date_asc" | "date_desc",
+): T[] {
+  const copy = [...scholarships];
+
+  switch (sortBy) {
+    case "date_asc":
+      return copy.sort((a, b) => a.dateCloture.localeCompare(b.dateCloture));
+    case "date_desc":
+      return copy.sort((a, b) => b.dateCloture.localeCompare(a.dateCloture));
+    case "name_asc":
+      return copy.sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
+    default:
+      return copy;
+  }
 }

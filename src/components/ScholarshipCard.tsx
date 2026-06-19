@@ -3,6 +3,7 @@ import type { ScholarshipMatch } from "@/lib/matching";
 import { STUDY_CYCLE_LABELS } from "@/lib/education-levels";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
+import { getCountryHref } from "@/lib/bourses/countries";
 
 const statusLabels = {
   encours: { label: "En cours", className: "bg-green-100 text-green-700" },
@@ -97,7 +98,7 @@ export function ScholarshipCardCompact({ scholarship }: { scholarship: Scholarsh
   const status = statusLabels[scholarship.status];
   return (
     <Link
-      href="/auth/inscription"
+      href={getCountryHref(scholarship.paysHote)}
       className="group block rounded-2xl border border-border bg-white p-5 transition hover:border-aksanti-red/30 hover:shadow-lg"
     >
       <div className="flex items-center justify-between">

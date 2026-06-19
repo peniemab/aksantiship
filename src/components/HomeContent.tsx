@@ -1,9 +1,19 @@
 "use client";
 
+import { BourseSearchFilters } from "@/components/BourseSearchFilters";
 import { ScholarshipCardCompact } from "@/components/ScholarshipCard";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
+import { getCountryHref } from "@/lib/bourses/countries";
+import {
+  filterScholarshipsBySearch,
+  hasActiveBourseFilters,
+} from "@/lib/bourses/filters";
+import { listScholarshipCountries } from "@/lib/bourses/repository";
+import { FEATURED_SCHOLARSHIP_IDS } from "@/lib/data/scholarships";
+import type { StudyCycle } from "@/lib/types";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 const stats = [
   { value: "1 000+", label: "Abonnements" },
@@ -11,8 +21,37 @@ const stats = [
   { value: "100+", label: "Boursiers accompagnés" },
 ];
 
+const countries = listScholarshipCountries();
+
 export function HomeContent() {
-  const { bourses: featured, loading, error } = useBourses({ featured: true });
+  const { bourses: all, loading, error } = useBourses();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [paysFilter, setPaysFilter] = useState("all");
+  const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
+
+  const hasFilters = hasActiveBourseFilters({
+    query: searchQuery,
+    pays: paysFilter,
+    cycle: cycleFilter,
+  });
+
+  const displayed = useMemo(() => {
+    const filtered = filterScholarshipsBySearch(all, {
+      query: searchQuery,
+      pays: paysFilter,
+      cycle: cycleFilter,
+    });
+    if (!hasFilters) {
+      return filtered.filter((s) => FEATURED_SCHOLARSHIP_IDS.includes(s.id));
+    }
+    return filtered;
+  }, [all, searchQuery, paysFilter, cycleFilter, hasFilters]);
+
+  const resetSearch = () => {
+    setSearchQuery("");
+    setPaysFilter("all");
+    setCycleFilter("all");
+  };
 
   return (
     <>
@@ -91,15 +130,56 @@ export function HomeContent() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-white py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-extrabold text-foreground">
+            Explorer par pays de destination
+          </h2>
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted">
+            Comme une carte des opportunités. Cliquez sur un pays pour voir les bourses associées.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
+            {countries.map((country) => (
+              <Link
+                key={country}
+                href={getCountryHref(country)}
+                className="rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground/80 transition hover:border-aksanti-red/40 hover:text-aksanti-red"
+              >
+                {country}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-6 text-center">
+            <Link href="/pays" className="text-sm font-semibold text-aksanti-red hover:underline">
+              Voir tous les pays →
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-extrabold text-foreground">
-            Nos meilleures offres disponibles
+            {hasFilters ? "Résultats de recherche" : "Nos meilleures offres disponibles"}
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
-            Découvrez une sélection de bourses internationales populaires, chargées via notre
-            API interne, prête pour la base de données.
+            {hasFilters
+              ? "Catalogue public. Créez votre profil pour un filtrage personnalisé."
+              : "Découvrez une sélection de bourses internationales populaires. Utilisez la recherche pour explorer tout le catalogue."}
           </p>
+
+          <BourseSearchFilters
+            variant="public"
+            query={searchQuery}
+            pays={paysFilter}
+            cycle={cycleFilter}
+            countries={countries}
+            resultCount={displayed.length}
+            onQueryChange={setSearchQuery}
+            onPaysChange={setPaysFilter}
+            onCycleChange={setCycleFilter}
+            onReset={resetSearch}
+          />
 
           {error && (
             <div className="mx-auto mt-6 max-w-lg">
@@ -113,20 +193,37 @@ export function HomeContent() {
                 <div key={i} className="h-32 animate-pulse rounded-2xl bg-surface" />
               ))}
             </div>
-          ) : (
+          ) : displayed.length > 0 ? (
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((s) => (
+              {displayed.map((s) => (
                 <ScholarshipCardCompact key={s.id} scholarship={s} />
               ))}
             </div>
+          ) : (
+            <div className="mt-10 text-center">
+              <p className="text-muted">Aucune bourse ne correspond à votre recherche.</p>
+              <button
+                type="button"
+                onClick={resetSearch}
+                className="mt-3 text-sm font-semibold text-aksanti-red hover:underline"
+              >
+                Réinitialiser les filtres
+              </button>
+            </div>
           )}
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="/opportunites"
               className="inline-flex rounded-full border-2 border-aksanti-red px-8 py-3 text-sm font-bold text-aksanti-red transition hover:bg-aksanti-red hover:text-white"
             >
-              Voir toutes les opportunités
+              Mes opportunités (profil)
+            </Link>
+            <Link
+              href="/pays"
+              className="inline-flex rounded-full border border-border px-8 py-3 text-sm font-bold text-foreground/70 transition hover:border-aksanti-red/30 hover:text-aksanti-red"
+            >
+              Parcourir par pays
             </Link>
           </div>
         </div>

@@ -9,16 +9,22 @@ export const APP_NAV_LINKS = [
 export type AppNavHref = (typeof APP_NAV_LINKS)[number]["href"];
 
 /** Pages accessibles sans connexion. */
-export const PUBLIC_NAV_PATHS = ["/"] as const;
+export const PUBLIC_NAV_PATHS = ["/", "/pays"] as const;
+
+export function isPublicNavPath(href: string): boolean {
+  if ((PUBLIC_NAV_PATHS as readonly string[]).includes(href)) return true;
+  return href.startsWith("/pays/");
+}
 
 export function isNavActive(pathname: string, href: string): boolean {
   if (href === "/") return pathname === "/";
+  if (href === "/pays") return pathname === "/pays" || pathname.startsWith("/pays/");
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
 /** Visiteurs : connexion avec retour vers la page visée après login. */
 export function resolveNavHref(href: string, isAuthenticated: boolean): string {
-  if (isAuthenticated || (PUBLIC_NAV_PATHS as readonly string[]).includes(href)) {
+  if (isAuthenticated || isPublicNavPath(href)) {
     return href;
   }
   return `/auth/connexion?redirect=${encodeURIComponent(href)}`;
