@@ -1,16 +1,15 @@
 "use client";
 
 import { BourseSearchFilters } from "@/components/BourseSearchFilters";
+import { CountryExplorerGrid } from "@/components/CountryExplorerGrid";
 import { ScholarshipCardCompact } from "@/components/ScholarshipCard";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
-import { getCountryHref } from "@/lib/bourses/countries";
 import {
   filterScholarshipsBySearch,
   hasActiveBourseFilters,
 } from "@/lib/bourses/filters";
-import { listScholarshipCountries } from "@/lib/bourses/repository";
-import { FEATURED_SCHOLARSHIP_IDS } from "@/lib/data/scholarships";
+import { listStaticCountries } from "@/lib/bourses/repository";
 import type { StudyCycle } from "@/lib/types";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -21,10 +20,10 @@ const stats = [
   { value: "100+", label: "Boursiers accompagnés" },
 ];
 
-const countries = listScholarshipCountries();
+const defaultCountries = listStaticCountries();
 
 export function HomeContent() {
-  const { bourses: all, loading, error } = useBourses();
+  const { bourses: all, meta, loading, error } = useBourses();
   const [searchQuery, setSearchQuery] = useState("");
   const [paysFilter, setPaysFilter] = useState("all");
   const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
@@ -36,16 +35,29 @@ export function HomeContent() {
   });
 
   const displayed = useMemo(() => {
-    const filtered = filterScholarshipsBySearch(all, {
+    return filterScholarshipsBySearch(all, {
       query: searchQuery,
       pays: paysFilter,
       cycle: cycleFilter,
     });
-    if (!hasFilters) {
-      return filtered.filter((s) => FEATURED_SCHOLARSHIP_IDS.includes(s.id));
-    }
-    return filtered;
-  }, [all, searchQuery, paysFilter, cycleFilter, hasFilters]);
+  }, [all, searchQuery, paysFilter, cycleFilter]);
+
+  const totalBourses = meta?.sources?.total ?? all.length;
+
+  const countryItems = useMemo(() => {
+    const names = meta?.countries?.length ? meta.countries : defaultCountries;
+    return names
+      .map((country) => ({
+        country,
+        count: all.filter((s) => s.paysHote === country).length,
+      }))
+      .filter((item) => item.count > 0);
+  }, [meta?.countries, all, defaultCountries]);
+
+  const filterCountries = useMemo(() => {
+    if (meta?.countries?.length) return meta.countries;
+    return defaultCountries;
+  }, [meta?.countries]);
 
   const resetSearch = () => {
     setSearchQuery("");
@@ -135,19 +147,8 @@ export function HomeContent() {
           <h2 className="text-center text-2xl font-extrabold text-foreground">
             Explorer par pays de destination
           </h2>
-          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted">
-            Comme une carte des opportunités. Cliquez sur un pays pour voir les bourses associées.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {countries.map((country) => (
-              <Link
-                key={country}
-                href={getCountryHref(country)}
-                className="rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground/80 transition hover:border-aksanti-red/40 hover:text-aksanti-red"
-              >
-                {country}
-              </Link>
-            ))}
+          <div className="mt-6">
+            <CountryExplorerGrid items={countryItems} />
           </div>
           <p className="mt-6 text-center">
             <Link href="/pays" className="text-sm font-semibold text-aksanti-red hover:underline">
@@ -160,12 +161,14 @@ export function HomeContent() {
       <section className="bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-extrabold text-foreground">
-            {hasFilters ? "Résultats de recherche" : "Nos meilleures offres disponibles"}
+            {hasFilters ? "Résultats de recherche" : "Toutes les bourses disponibles"}
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-muted">
-            {hasFilters
-              ? "Catalogue public. Créez votre profil pour un filtrage personnalisé."
-              : "Découvrez une sélection de bourses internationales populaires. Utilisez la recherche pour explorer tout le catalogue."}
+            {loading
+              ? "Chargement du catalogue..."
+              : hasFilters
+                ? `${displayed.length} résultat${displayed.length > 1 ? "s" : ""} sur ${totalBourses} bourses. Créez votre profil pour un filtrage personnalisé.`
+                : `${totalBourses} bourses référencées dans notre catalogue. Utilisez les filtres pour affiner votre recherche.`}
           </p>
 
           <BourseSearchFilters
@@ -173,7 +176,7 @@ export function HomeContent() {
             query={searchQuery}
             pays={paysFilter}
             cycle={cycleFilter}
-            countries={countries}
+            countries={filterCountries}
             resultCount={displayed.length}
             onQueryChange={setSearchQuery}
             onPaysChange={setPaysFilter}
@@ -189,7 +192,7 @@ export function HomeContent() {
 
           {loading ? (
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {Array.from({ length: Math.min(9, totalBourses || 9) }).map((_, i) => (
                 <div key={i} className="h-32 animate-pulse rounded-2xl bg-surface" />
               ))}
             </div>

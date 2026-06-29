@@ -1,4 +1,5 @@
 import { SCHOLARSHIPS } from "@/lib/data/scholarships";
+import { getStaticScholarships } from "./load-scholarships";
 
 export function countryToSlug(country: string): string {
   return country
@@ -9,9 +10,19 @@ export function countryToSlug(country: string): string {
     .replace(/^-|-$/g, "");
 }
 
+export function resolveCountryFromSlug(
+  slug: string,
+  countryNames: string[],
+): string | undefined {
+  const normalized = slug.trim().toLowerCase();
+  if (!normalized) return undefined;
+  return countryNames.find((c) => countryToSlug(c) === normalized);
+}
+
+/** Résolution côté client (catalogue statique). Préférer resolveCountryFromSlug avec liste serveur. */
 export function slugToCountry(slug: string): string | undefined {
-  const countries = [...new Set(SCHOLARSHIPS.map((s) => s.paysHote))];
-  return countries.find((c) => countryToSlug(c) === slug);
+  const countries = [...new Set(getStaticScholarships().map((s) => s.paysHote))];
+  return resolveCountryFromSlug(slug, countries);
 }
 
 export const COUNTRY_SUMMARIES: Record<string, string> = {
@@ -31,6 +42,11 @@ export const COUNTRY_SUMMARIES: Record<string, string> = {
     "Le Royaume-Uni concentre des bourses prestigieuses (Chevening, Commonwealth) pour les profils académiques solides.",
   International:
     "Ces bourses ne ciblent pas un seul pays : elles couvrent plusieurs destinations ou des institutions multinationales.",
+  Canada: "Le Canada propose des bourses d'excellence (Vanier, Pearson) et un environnement multiculturel pour étudiants internationaux.",
+  "États-Unis": "Les États-Unis offrent Fulbright, bourses universitaires et programmes gouvernementaux pour étudiants du monde entier.",
+  Australie: "L'Australie finance des étudiants via Australia Awards et des bourses universitaires prestigieuses.",
+  Chine:
+    "Plus de 11 000 bourses référencées via CUCAS et le programme CSC (289 universités). Pic d'ouverture décembre-mars ; clôtures provinciales et universitaires jusqu'à fin juin pour la rentrée de septembre.",
 };
 
 export function getCountrySummary(country: string): string {
@@ -42,4 +58,9 @@ export function getCountrySummary(country: string): string {
 
 export function getCountryHref(country: string): string {
   return `/pays/${countryToSlug(country)}`;
+}
+
+/** @deprecated Utiliser getStaticScholarships pour la liste complète */
+export function getLegacyScholarshipCountries(): string[] {
+  return [...new Set(SCHOLARSHIPS.map((s) => s.paysHote))];
 }

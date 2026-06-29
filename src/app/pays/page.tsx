@@ -1,14 +1,18 @@
-import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { getCountryHref, getCountrySummary } from "@/lib/bourses/countries";
+import { CountryExplorerGrid } from "@/components/CountryExplorerGrid";
 import {
-  countBoursesByCountry,
-  listScholarshipCountries,
-} from "@/lib/bourses/repository";
+  countBoursesByCountryServer,
+  listScholarshipCountriesServer,
+} from "@/lib/bourses/repository.server";
+import { getCountrySummary } from "@/lib/bourses/countries";
 
 export default function PaysIndexPage() {
-  const countries = listScholarshipCountries();
+  const countries = listScholarshipCountriesServer();
+  const countryItems = countries.map((country) => ({
+    country,
+    count: countBoursesByCountryServer(country),
+  }));
 
   return (
     <>
@@ -21,30 +25,19 @@ export default function PaysIndexPage() {
             compatibles avec votre niveau d&apos;études.
           </p>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <CountryExplorerGrid items={countryItems.filter((i) => i.count > 0)} />
+
+          <div className="mt-12 space-y-4">
             {countries.map((country) => {
-              const count = countBoursesByCountry(country);
+              const count = countBoursesByCountryServer(country);
+              if (count === 0) return null;
               return (
-                <Link
-                  key={country}
-                  href={getCountryHref(country)}
-                  className="group rounded-2xl border border-border bg-white p-6 shadow-sm transition hover:border-aksanti-red/30 hover:shadow-md"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <h2 className="text-xl font-bold text-foreground group-hover:text-aksanti-red">
-                      {country}
-                    </h2>
-                    <span className="shrink-0 rounded-full bg-aksanti-red/10 px-3 py-1 text-xs font-bold text-aksanti-red">
-                      {count} bourse{count > 1 ? "s" : ""}
-                    </span>
-                  </div>
-                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted">
-                    {getCountrySummary(country)}
-                  </p>
-                  <p className="mt-4 text-sm font-semibold text-aksanti-red">
-                    Voir les bourses →
-                  </p>
-                </Link>
+                <details key={country} className="rounded-2xl border border-border bg-white p-4">
+                  <summary className="cursor-pointer font-semibold text-foreground">
+                    {country} ({count} bourse{count > 1 ? "s" : ""})
+                  </summary>
+                  <p className="mt-2 text-sm text-muted">{getCountrySummary(country)}</p>
+                </details>
               );
             })}
           </div>

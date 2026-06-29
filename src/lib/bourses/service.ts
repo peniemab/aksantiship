@@ -1,4 +1,10 @@
-import { listBourses, getBourseById, countBourses } from "@/lib/bourses/repository";
+import {
+  listBoursesServer,
+  getBourseByIdServer,
+  countBoursesServer,
+  getScholarshipStatsServer,
+  listScholarshipCountriesServer,
+} from "@/lib/bourses/repository.server";
 import { matchScholarshipToEducationLevel } from "@/lib/bourses/matching";
 import type { EducationLevel } from "@/lib/education-levels";
 import type {
@@ -16,8 +22,8 @@ export interface BuildBoursesListOptions extends BourseRepositoryQuery {
 
 export function buildBoursesListResponse(options: BuildBoursesListOptions = {}) {
   const { niveauEtudes, matchOnly, includeMatch, ...repoQuery } = options;
-  const all = listBourses(repoQuery);
-  const total = countBourses();
+  const all = listBoursesServer(repoQuery);
+  const total = countBoursesServer();
 
   let data: BourseWithMatch[] = all.map((scholarship) => {
     if (niveauEtudes && (includeMatch || matchOnly)) {
@@ -44,6 +50,8 @@ export function buildBoursesListResponse(options: BuildBoursesListOptions = {}) 
     returned: data.length,
     ...(matched !== undefined && { matched }),
     ...(excluded !== undefined && { excluded }),
+    sources: getScholarshipStatsServer(),
+    countries: listScholarshipCountriesServer(),
   };
 
   return { data, meta };
@@ -53,7 +61,7 @@ export function buildBourseDetailResponse(
   id: string,
   niveauEtudes?: EducationLevel,
 ) {
-  const scholarship = getBourseById(id);
+  const scholarship = getBourseByIdServer(id);
   if (!scholarship) return null;
 
   const data: BourseWithMatch = niveauEtudes

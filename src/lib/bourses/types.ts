@@ -17,6 +17,14 @@ export interface BoursesListMeta {
   returned: number;
   matched?: number;
   excluded?: number;
+  sources?: {
+    total: number;
+    curated: number;
+    catalog: number;
+    china: number;
+    synced: number;
+  };
+  countries?: string[];
 }
 
 export interface BoursesListResponse {
@@ -42,6 +50,7 @@ export interface BoursesQueryParams {
 export interface BourseRepositoryQuery {
   status?: ScholarshipStatus;
   featured?: boolean;
+  includeClosed?: boolean;
   q?: string;
   pays?: string;
   cycle?: StudyCycle | "all";

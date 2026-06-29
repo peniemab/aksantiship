@@ -87,6 +87,10 @@ export interface Scholarship {
   conditionsEligibilite: string[];
   lienOfficiel: string;
   status: ScholarshipStatus;
+  /** Source de la donnée (curated, rss, sync, etc.) */
+  source?: string;
+  /** Date de dernière synchronisation (ISO) */
+  syncedAt?: string;
 }
 
 export interface AccompanimentRequest {

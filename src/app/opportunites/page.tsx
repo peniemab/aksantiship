@@ -7,7 +7,7 @@ import { ProfileAnalysisCard } from "@/components/ProfileAnalysisCard";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
 import { filterScholarshipsBySearch, hasActiveBourseFilters, sortScholarshipMatches, type BourseSortOption } from "@/lib/bourses/filters";
-import { listScholarshipCountries } from "@/lib/bourses/repository";
+import { listStaticCountries } from "@/lib/bourses/repository";
 import { analyzeProfile, filterScholarshipsForProfile } from "@/lib/matching";
 import type { ScholarshipStatus, StudyCycle } from "@/lib/types";
 import { useAuth } from "@/context/AuthContext";
@@ -22,7 +22,7 @@ const tabs: { key: ScholarshipStatus; label: string }[] = [
   { key: "fermee", label: "Bourses fermées" },
 ];
 
-const countries = listScholarshipCountries();
+const defaultCountries = listStaticCountries();
 
 function OpportunitiesContent() {
   const { profile } = useAuth();
@@ -46,6 +46,11 @@ function OpportunitiesContent() {
     () => (profile && bourses.length > 0 ? analyzeProfile(profile, bourses) : null),
     [profile, bourses],
   );
+
+  const countries = useMemo(() => {
+    if (meta?.countries?.length) return meta.countries;
+    return defaultCountries;
+  }, [meta?.countries]);
 
   const profileMatches = useMemo(() => {
     if (!profile) return [];
