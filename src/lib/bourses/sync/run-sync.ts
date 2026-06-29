@@ -16,6 +16,9 @@ import { getGermanySyncIntensity } from "../germany-deadlines";
 import { fetchBelgiumScholarships } from "./studyinbelgium";
 import { writeBelgiumScholarshipsFile, getBelgiumScholarshipsFilePath } from "./belgium-storage";
 import { getBelgiumSyncIntensity } from "../belgium-deadlines";
+import { fetchCanadaScholarships } from "./canada-sync";
+import { writeCanadaScholarshipsFile, getCanadaScholarshipsFilePath } from "./canada-storage";
+import { getCanadaSyncIntensity } from "../canada-deadlines";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = path.join(process.cwd(), "data", "china-cucas-scholarships.json");
@@ -39,6 +42,9 @@ export interface SyncReport {
   belgiumFetched: number;
   belgiumStored: number;
   belgiumSyncIntensity: string;
+  canadaFetched: number;
+  canadaStored: number;
+  canadaSyncIntensity: string;
   grandTotal: number;
   grandTotalOpen: number;
   sources: { source: string; fetched: number; added: number; errors: string[] }[];
@@ -95,6 +101,7 @@ export function loadChinaScholarships(): Scholarship[] {
 const FRANCE_FILE = getFranceScholarshipsFilePath();
 const GERMANY_FILE = getGermanyScholarshipsFilePath();
 const BELGIUM_FILE = getBelgiumScholarshipsFilePath();
+const CANADA_FILE = getCanadaScholarshipsFilePath();
 
 export function loadFranceScholarships(): Scholarship[] {
   try {
@@ -129,6 +136,17 @@ export function loadBelgiumScholarships(): Scholarship[] {
   }
 }
 
+export function loadCanadaScholarships(): Scholarship[] {
+  try {
+    if (!existsSync(CANADA_FILE)) return [];
+    const raw = readFileSync(CANADA_FILE, "utf-8");
+    const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
+    return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
+  } catch {
+    return [];
+  }
+}
+
 export function loadAllScholarships(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
@@ -137,6 +155,7 @@ export function loadAllScholarships(): Scholarship[] {
     loadFranceScholarships(),
     loadGermanyScholarships(),
     loadBelgiumScholarships(),
+    loadCanadaScholarships(),
   ]);
 }
 
@@ -237,6 +256,19 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     errors.push(e instanceof Error ? e.message : "Erreur sync Belgique");
   }
 
+  const canadaIntensity = getCanadaSyncIntensity();
+  let canadaFetched = 0;
+  let canadaStored = 0;
+
+  try {
+    const canadaScholarships = await fetchCanadaScholarships();
+    canadaFetched = canadaScholarships.length;
+    writeCanadaScholarshipsFile(canadaScholarships);
+    canadaStored = canadaScholarships.length;
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Erreur sync Canada");
+  }
+
   const all = loadAllScholarships();
   const open = filterOpenScholarships(all.map((s) => withResolvedStatus(s)));
 
@@ -246,7 +278,7 @@ export async function runScholarshipSync(): Promise<SyncReport> {
   return {
     ok:
       (rssResults.every((r) => r.errors.length === 0) || rssAdded > 0) &&
-      (chinaStored > 0 || franceStored > 0 || germanyStored > 0 || belgiumStored > 0),
+      (chinaStored > 0 || franceStored > 0 || germanyStored > 0 || belgiumStored > 0 || canadaStored > 0),
     syncedAt: new Date().toISOString(),
     curatedTotal: curated.length,
     rssFetched,
@@ -264,6 +296,9 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     belgiumFetched,
     belgiumStored,
     belgiumSyncIntensity: belgiumIntensity,
+    canadaFetched,
+    canadaStored,
+    canadaSyncIntensity: canadaIntensity,
     grandTotal: all.length,
     grandTotalOpen: open.length,
     sources: [
@@ -296,6 +331,12 @@ export async function runScholarshipSync(): Promise<SyncReport> {
         fetched: belgiumFetched,
         added: belgiumStored,
         errors: errors.filter((e) => e.includes("Belgique")),
+      },
+      {
+        source: "canada",
+        fetched: canadaFetched,
+        added: canadaStored,
+        errors: errors.filter((e) => e.includes("Canada")),
       },
     ],
     errors,

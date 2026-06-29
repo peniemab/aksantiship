@@ -22,6 +22,7 @@ import { NextResponse } from "next/server";
  * - langue       : filtre langue requise (ex. Anglais, Allemand)
  * - communaute   : filtre communauté belge (FWB, Flandre)
  * - langueEnseignement : filtre langue d'enseignement (Français, Néerlandais, Anglais)
+ * - typeCandidature  : directe | via_etablissement | automatique_admission (Canada)
  */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -37,6 +38,7 @@ export async function GET(request: Request) {
   const langue = searchParams.get("langue") ?? undefined;
   const communaute = searchParams.get("communaute") ?? undefined;
   const langueEnseignement = searchParams.get("langueEnseignement") ?? undefined;
+  const typeCandidature = searchParams.get("typeCandidature") ?? undefined;
   const cycleParam = searchParams.get("cycle");
   const cycle =
     cycleParam === "undergraduate" ||
@@ -65,6 +67,7 @@ export async function GET(request: Request) {
     langue,
     communaute,
     langueEnseignement,
+    typeCandidature,
   });
 
   const response: BoursesListResponse = { data, meta };

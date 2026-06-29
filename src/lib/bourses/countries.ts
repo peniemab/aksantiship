@@ -42,7 +42,8 @@ export const COUNTRY_SUMMARIES: Record<string, string> = {
     "Le Royaume-Uni concentre des bourses prestigieuses (Chevening, Commonwealth) pour les profils académiques solides.",
   International:
     "Ces bourses ne ciblent pas un seul pays : elles couvrent plusieurs destinations ou des institutions multinationales.",
-  Canada: "Le Canada propose des bourses d'excellence (Vanier, Pearson) et un environnement multiculturel pour étudiants internationaux.",
+  Canada:
+    "150+ programmes : ÉduCanada (BEC, ELAP), bourses automatiques à l'admission (U of T, Ottawa) et fondations privées (UdeM). Filtrez par mode de candidature. Pic janv.–mars (gouvernement) et sept.–nov. (excellence).",
   "États-Unis": "Les États-Unis offrent Fulbright, bourses universitaires et programmes gouvernementaux pour étudiants du monde entier.",
   Australie: "L'Australie finance des étudiants via Australia Awards et des bourses universitaires prestigieuses.",
   Chine:

@@ -25,6 +25,7 @@ export interface BoursesListMeta {
     france: number;
     germany: number;
     belgium: number;
+    canada: number;
     synced: number;
   };
   countries?: string[];
@@ -52,6 +53,7 @@ export interface BoursesQueryParams {
   langue?: string;
   communaute?: string;
   langueEnseignement?: string;
+  typeCandidature?: string;
 }
 
 export interface BourseRepositoryQuery {
@@ -65,4 +67,5 @@ export interface BourseRepositoryQuery {
   langue?: string;
   communaute?: string;
   langueEnseignement?: string;
+  typeCandidature?: string;
 }

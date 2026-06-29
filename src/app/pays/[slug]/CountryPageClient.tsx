@@ -27,12 +27,14 @@ export function CountryPageClient({ country }: { country: string | null }) {
   const [langueFilter, setLangueFilter] = useState("");
   const [communauteFilter, setCommunauteFilter] = useState("");
   const [langueEnseignementFilter, setLangueEnseignementFilter] = useState("");
+  const [typeCandidatureFilter, setTypeCandidatureFilter] = useState("");
   const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
   const [sortBy, setSortBy] = useState<BourseSortOption>("date_asc");
 
   const isFrance = country === "France";
   const isGermany = country === "Allemagne";
   const isBelgium = country === "Belgique";
+  const isCanada = country === "Canada";
 
   const apiFilters = useMemo(() => {
     if (!country) return {};
@@ -44,16 +46,21 @@ export function CountryPageClient({ country }: { country: string | null }) {
       ...(isBelgium && langueEnseignementFilter.trim()
         ? { langueEnseignement: langueEnseignementFilter.trim() }
         : {}),
+      ...(isCanada && typeCandidatureFilter.trim()
+        ? { typeCandidature: typeCandidatureFilter.trim() }
+        : {}),
     };
   }, [
     country,
     isFrance,
     isGermany,
     isBelgium,
+    isCanada,
     nationaliteFilter,
     langueFilter,
     communauteFilter,
     langueEnseignementFilter,
+    typeCandidatureFilter,
   ]);
 
   const { bourses, loading, error } = useBourses(apiFilters);
@@ -67,6 +74,9 @@ export function CountryPageClient({ country }: { country: string | null }) {
       ...(isBelgium && communauteFilter.trim() ? { communaute: communauteFilter.trim() } : {}),
       ...(isBelgium && langueEnseignementFilter.trim()
         ? { langueEnseignement: langueEnseignementFilter.trim() }
+        : {}),
+      ...(isCanada && typeCandidatureFilter.trim()
+        ? { typeCandidature: typeCandidatureFilter.trim() }
         : {}),
     });
     const publicSort: "date_asc" | "date_desc" | "name_asc" = PUBLIC_SORT_OPTIONS.includes(
@@ -83,10 +93,12 @@ export function CountryPageClient({ country }: { country: string | null }) {
     isFrance,
     isGermany,
     isBelgium,
+    isCanada,
     nationaliteFilter,
     langueFilter,
     communauteFilter,
     langueEnseignementFilter,
+    typeCandidatureFilter,
   ]);
 
   const resetSearch = () => {
@@ -95,6 +107,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
     setLangueFilter("");
     setCommunauteFilter("");
     setLangueEnseignementFilter("");
+    setTypeCandidatureFilter("");
     setCycleFilter("all");
     setSortBy("date_asc");
   };
@@ -118,6 +131,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
     langue: isGermany ? langueFilter : undefined,
     communaute: isBelgium ? communauteFilter : undefined,
     langueEnseignement: isBelgium ? langueEnseignementFilter : undefined,
+    typeCandidature: isCanada ? typeCandidatureFilter : undefined,
   });
 
   return (
@@ -154,6 +168,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
         showLangue={isGermany}
         showCommunaute={isBelgium}
         showLangueEnseignement={isBelgium}
+        showTypeCandidature={isCanada}
         query={searchQuery}
         pays="all"
         cycle={cycleFilter}
@@ -161,6 +176,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
         langue={langueFilter}
         communaute={communauteFilter}
         langueEnseignement={langueEnseignementFilter}
+        typeCandidature={typeCandidatureFilter}
         countries={[]}
         resultCount={filtered.length}
         sortBy={PUBLIC_SORT_OPTIONS.includes(sortBy) ? sortBy : "date_asc"}
@@ -171,6 +187,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
         onLangueChange={setLangueFilter}
         onCommunauteChange={setCommunauteFilter}
         onLangueEnseignementChange={setLangueEnseignementFilter}
+        onTypeCandidatureChange={setTypeCandidatureFilter}
         onSortChange={(value) => {
           if (PUBLIC_SORT_OPTIONS.includes(value)) setSortBy(value);
         }}

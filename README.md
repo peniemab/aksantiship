@@ -64,6 +64,7 @@ npm run sync:china:full   # Catalogue CUCAS complet (~11 470 bourses)
 npm run sync:france       # Campus France (~380 programmes)
 npm run sync:germany      # Allemagne DAAD (~163 programmes)
 npm run sync:belgium      # Belgique Study in Belgium (~40 programmes)
+npm run sync:canada       # Canada ÉduCanada + UdeM (~150 programmes)
 ```
 
 ---
@@ -78,12 +79,13 @@ Les bourses sont stockées dans `data/` et mises à jour par des scripts, pas à
 | `data/france-campusfrance-scholarships.json` | Bourses France (CampusBourses) |
 | `data/germany-daad-scholarships.json` | Bourses Allemagne (catalogue DAAD) |
 | `data/belgium-scholarships.json` | Bourses Belgique (FWB + Flandre) |
+| `data/canada-scholarships.json` | Bourses Canada (ÉduCanada + UdeM) |
 | `data/daad-catalog-titles.json` | Snapshot titres DAAD (fallback si site inaccessible) |
 | `data/scholarships-synced.json` | Bourses RSS internationales |
 
 ### France (CampusBourses — ~380 programmes)
 
-Relancer **chaque année**, surtout **octobre–janvier** (Eiffel, programmes d'excellence) :
+Relancer **chaque année**, **octobre–janvier** (Eiffel, programmes d'excellence) :
 
 ```bash
 npm run sync:france
@@ -100,7 +102,7 @@ Les dates `endAt` viennent de Campus France. Les bourses expirées sont masquée
 
 ### Allemagne (DAAD — ~163 programmes)
 
-Relancer **chaque année**, surtout **juillet–octobre** (Deutschlandstipendium, fondations) et **octobre–janvier** (bourses master DAAD) :
+Relancer **chaque année**, **juillet–octobre** (Deutschlandstipendium, fondations) et **octobre–janvier** (bourses master DAAD) :
 
 ```bash
 npm run sync:germany
@@ -123,7 +125,7 @@ Sur `/pays/allemagne`, filtrez par **langue requise** (Anglais / Allemand). Les 
 
 ### Belgique (Study in Belgium + Flandre — ~40 programmes)
 
-Relancer **chaque année**, surtout **septembre–janvier** (ARES, FWB) et **février–avril** (Master Mind, universités flamandes) :
+Relancer **chaque année**, **septembre–janvier** (ARES, FWB) et **février–avril** (Master Mind, universités flamandes) :
 
 ```bash
 npm run sync:belgium
@@ -137,6 +139,28 @@ git commit -m "Mettre à jour le catalogue des bourses Belgique"
 ```
 
 Sur `/pays/belgique`, filtrez par **communauté** (Wallonie-Bruxelles / Flandre) et **langue d'enseignement** (Français / Néerlandais / Anglais).
+
+### Canada (ÉduCanada + UdeM — ~150 programmes)
+
+Relancer **chaque année**, **janvier–mars** (BEC, ELAP) et **septembre–novembre** (Pearson, McCall MacBain) :
+
+```bash
+npm run sync:canada
+```
+
+Puis committer :
+
+```bash
+git add data/canada-scholarships.json
+git commit -m "Mettre à jour le catalogue des bourses Canada"
+```
+
+Sur `/pays/canada`, filtrez par **mode de candidature** :
+- Candidature directe
+- Via l'université (ex. BEC — pas de dossier étudiant direct)
+- Automatique à l'admission (ex. Ottawa, Toronto)
+
+Les cartes affichent un badge explicite et adaptent le libellé du lien officiel.
 
 ### Chine (à relancer chaque année, surtout décembre–mars)
 
@@ -220,6 +244,7 @@ GET /api/bourses?niveauEtudes=finaliste&matchOnly=true&includeMatch=true
 - [x] Sync **France** (Campus France / CampusBourses)
 - [x] Sync **Allemagne** (catalogue DAAD + filtres langue)
 - [x] Sync **Belgique** (Study in Belgium + Master Mind, filtres communauté/langue)
+- [x] Sync **Canada** (ÉduCanada + UdeM, badges candidature)
 - [ ] Sync dédiée **Turquie** (Türkiye Bursları, prochain pays prioritaire)
 
 ---

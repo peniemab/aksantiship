@@ -14,6 +14,7 @@ export interface ScholarshipMergeMeta {
   france: number;
   germany: number;
   belgium: number;
+  canada: number;
   synced: number;
 }
 
@@ -59,6 +60,7 @@ export function getScholarshipMergeMeta(all: Scholarship[]): ScholarshipMergeMet
   let france = 0;
   let germany = 0;
   let belgium = 0;
+  let canada = 0;
   let synced = 0;
 
   for (const s of all) {
@@ -71,6 +73,7 @@ export function getScholarshipMergeMeta(all: Scholarship[]): ScholarshipMergeMet
     else if (s.source === "campusfrance") france += 1;
     else if (s.source === "daad") germany += 1;
     else if (s.source === "studyinbelgium" || s.source === "studyinflanders") belgium += 1;
+    else if (s.source === "educanada" || s.source === "umontreal") canada += 1;
     else if (CATALOG_SCHOLARSHIPS.some((c) => c.id === s.id)) catalog += 1;
     else synced += 1;
   }
@@ -83,6 +86,7 @@ export function getScholarshipMergeMeta(all: Scholarship[]): ScholarshipMergeMet
     france,
     germany,
     belgium,
+    canada,
     synced,
   };
 }

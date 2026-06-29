@@ -10,6 +10,7 @@ export interface BourseSearchFilters {
   langue?: string;
   communaute?: string;
   langueEnseignement?: string;
+  typeCandidature?: string;
 }
 
 export type BourseSortOption = "score_desc" | "date_asc" | "date_desc" | "name_asc";
@@ -85,6 +86,29 @@ export function matchesCommunauteFilter(
   return c.includes(q) || q.includes(c);
 }
 
+export const BOURSE_CANADA_APPLICATION_OPTIONS = [
+  { value: "", label: "Tous les modes de candidature" },
+  { value: "directe", label: "Candidature directe" },
+  { value: "via_etablissement", label: "Via l'université" },
+  { value: "automatique_admission", label: "Automatique à l'admission" },
+] as const;
+
+export function matchesTypeCandidatureFilter(
+  scholarship: Pick<Scholarship, "typeCandidature" | "attributionAutomatiqueAdmission">,
+  filter: string,
+): boolean {
+  if (!filter.trim()) return true;
+
+  if (filter === "automatique_admission") {
+    return (
+      scholarship.attributionAutomatiqueAdmission === true ||
+      scholarship.typeCandidature === "automatique_admission"
+    );
+  }
+
+  return scholarship.typeCandidature === filter;
+}
+
 export function filterScholarshipsBySearch<
   T extends Pick<
     Scholarship,
@@ -97,6 +121,8 @@ export function filterScholarshipsBySearch<
     | "languesRequises"
     | "langueEnseignement"
     | "communaute"
+    | "typeCandidature"
+    | "attributionAutomatiqueAdmission"
   >,
 >(scholarships: T[], filters: BourseSearchFilters): T[] {
   const q = filters.query ? normalizeSearchQuery(filters.query) : "";
@@ -106,6 +132,7 @@ export function filterScholarshipsBySearch<
   const langue = filters.langue?.trim();
   const communaute = filters.communaute?.trim();
   const langueEnseignement = filters.langueEnseignement?.trim();
+  const typeCandidature = filters.typeCandidature?.trim();
 
   return scholarships.filter((s) => {
     if (pays && pays !== "all" && s.paysHote !== pays) return false;
@@ -119,7 +146,13 @@ export function filterScholarshipsBySearch<
     if (communaute && !matchesCommunauteFilter(s.communaute, communaute)) {
       return false;
     }
-    if (langueEnseignement && !matchesInstructionLanguageFilter(s.langueEnseignement, langueEnseignement)) {
+    if (
+      langueEnseignement &&
+      !matchesInstructionLanguageFilter(s.langueEnseignement, langueEnseignement)
+    ) {
+      return false;
+    }
+    if (typeCandidature && !matchesTypeCandidatureFilter(s, typeCandidature)) {
       return false;
     }
     if (!q) return true;
@@ -133,6 +166,7 @@ export function filterScholarshipsBySearch<
       ...(s.languesRequises ?? []),
       s.langueEnseignement ?? "",
       s.communaute ?? "",
+      s.typeCandidature ?? "",
     ]
       .join(" ")
       .toLowerCase();
@@ -149,7 +183,8 @@ export function hasActiveBourseFilters(filters: BourseSearchFilters): boolean {
       filters.nationalite?.trim() ||
       filters.langue?.trim() ||
       filters.communaute?.trim() ||
-      filters.langueEnseignement?.trim(),
+      filters.langueEnseignement?.trim() ||
+      filters.typeCandidature?.trim(),
   );
 }
 

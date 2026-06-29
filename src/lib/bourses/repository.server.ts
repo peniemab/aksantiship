@@ -17,12 +17,14 @@ import { getChinaScholarshipsFilePath } from "./sync/china-storage";
 import { getFranceScholarshipsFilePath } from "./sync/france-storage";
 import { getGermanyScholarshipsFilePath } from "./sync/germany-storage";
 import { getBelgiumScholarshipsFilePath } from "./sync/belgium-storage";
+import { getCanadaScholarshipsFilePath } from "./sync/canada-storage";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = getChinaScholarshipsFilePath();
 const FRANCE_FILE = getFranceScholarshipsFilePath();
 const GERMANY_FILE = getGermanyScholarshipsFilePath();
 const BELGIUM_FILE = getBelgiumScholarshipsFilePath();
+const CANADA_FILE = getCanadaScholarshipsFilePath();
 
 function readJsonScholarships(filePath: string): Scholarship[] {
   try {
@@ -55,6 +57,10 @@ export function readBelgiumFromDisk(): Scholarship[] {
   return readJsonScholarships(BELGIUM_FILE);
 }
 
+export function readCanadaFromDisk(): Scholarship[] {
+  return readJsonScholarships(CANADA_FILE);
+}
+
 export function loadAllScholarshipsServer(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
@@ -63,6 +69,7 @@ export function loadAllScholarshipsServer(): Scholarship[] {
     readFranceFromDisk(),
     readGermanyFromDisk(),
     readBelgiumFromDisk(),
+    readCanadaFromDisk(),
   ]).map((s) => withResolvedStatus(s));
 }
 
@@ -92,6 +99,7 @@ export function listBoursesServer(query: BourseRepositoryQuery = {}): Scholarshi
     langue: query.langue,
     communaute: query.communaute,
     langueEnseignement: query.langueEnseignement,
+    typeCandidature: query.typeCandidature,
   });
 
   return results.sort((a, b) => a.dateCloture.localeCompare(b.dateCloture));

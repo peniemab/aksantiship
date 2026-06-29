@@ -147,6 +147,10 @@ export const CATALOG_SCHOLARSHIPS: Scholarship[] = [
     lienOfficiel: "https://vanier.gc.ca",
     status: "a_venir",
     source: "curated",
+    organisme: "Gouvernement du Canada",
+    typeCandidature: "via_etablissement",
+    valeurFinanciere: "50 000 $ CAD / an × 3 ans",
+    province: "Fédéral",
   },
   {
     id: "lester-b-pearson",
@@ -160,6 +164,11 @@ export const CATALOG_SCHOLARSHIPS: Scholarship[] = [
     lienOfficiel: "https://future.utoronto.ca/pearson/about/",
     status: "a_venir",
     source: "curated",
+    organisme: "Université de Toronto",
+    typeCandidature: "via_etablissement",
+    attributionAutomatiqueAdmission: false,
+    valeurFinanciere: "Frais de scolarité + logement (4 ans)",
+    province: "Ontario",
   },
   {
     id: "australia-awards",

@@ -105,6 +105,14 @@ export interface Scholarship {
   communaute?: string;
   /** Langue d'enseignement du programme */
   langueEnseignement?: string;
+  /** Type de candidature (Canada : directe, via_etablissement, automatique_admission) */
+  typeCandidature?: string;
+  /** Bourse octroyée automatiquement à l'admission (Canada) */
+  attributionAutomatiqueAdmission?: boolean;
+  /** Montant ou fourchette financière (ex. 10 200 $ – 14 000 $ CAD) */
+  valeurFinanciere?: string;
+  /** Province ou territoire canadien */
+  province?: string;
 }
 
 export interface AccompanimentRequest {

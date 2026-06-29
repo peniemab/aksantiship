@@ -7,6 +7,7 @@ import {
   BOURSE_LANGUAGE_OPTIONS,
   BOURSE_INSTRUCTION_LANGUAGE_OPTIONS,
   BOURSE_COMMUNITY_OPTIONS,
+  BOURSE_CANADA_APPLICATION_OPTIONS,
   type BourseSortOption,
 } from "@/lib/bourses/filters";
 import type { StudyCycle } from "@/lib/types";
@@ -46,6 +47,9 @@ interface BourseSearchFiltersProps {
   showLangueEnseignement?: boolean;
   langueEnseignement?: string;
   onLangueEnseignementChange?: (value: string) => void;
+  showTypeCandidature?: boolean;
+  typeCandidature?: string;
+  onTypeCandidatureChange?: (value: string) => void;
 }
 
 export function BourseSearchFilters({
@@ -76,9 +80,16 @@ export function BourseSearchFilters({
   showLangueEnseignement = false,
   langueEnseignement = "",
   onLangueEnseignementChange,
+  showTypeCandidature = false,
+  typeCandidature = "",
+  onTypeCandidatureChange,
 }: BourseSearchFiltersProps) {
   const extraFilters =
-    showNationalite || showLangue || showCommunaute || showLangueEnseignement;
+    showNationalite ||
+    showLangue ||
+    showCommunaute ||
+    showLangueEnseignement ||
+    showTypeCandidature;
   const hasFilters = Boolean(
     query.trim() ||
       (!hidePays && pays && pays !== "all") ||
@@ -86,7 +97,8 @@ export function BourseSearchFilters({
       nationalite.trim() ||
       langue.trim() ||
       communaute.trim() ||
-      langueEnseignement.trim(),
+      langueEnseignement.trim() ||
+      typeCandidature.trim(),
   );
 
   const subtitle =
@@ -235,6 +247,25 @@ export function BourseSearchFilters({
               onChange={(e) => onLangueEnseignementChange(e.target.value)}
             >
               {BOURSE_INSTRUCTION_LANGUAGE_OPTIONS.map((opt) => (
+                <option key={opt.value || "all"} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </Select>
+          </div>
+        )}
+
+        {showTypeCandidature && onTypeCandidatureChange && (
+          <div className="min-w-0">
+            <label htmlFor="bourse-type-candidature" className="mb-1.5 block text-sm font-medium text-foreground">
+              Mode de candidature
+            </label>
+            <Select
+              id="bourse-type-candidature"
+              value={typeCandidature}
+              onChange={(e) => onTypeCandidatureChange(e.target.value)}
+            >
+              {BOURSE_CANADA_APPLICATION_OPTIONS.map((opt) => (
                 <option key={opt.value || "all"} value={opt.value}>
                   {opt.label}
                 </option>

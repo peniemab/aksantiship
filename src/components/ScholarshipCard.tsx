@@ -4,6 +4,8 @@ import { STUDY_CYCLE_LABELS } from "@/lib/education-levels";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import { getCountryHref } from "@/lib/bourses/countries";
+import { ScholarshipApplicationBadge } from "@/components/ScholarshipApplicationBadge";
+import { getScholarshipOfficialLinkLabel } from "@/lib/bourses/canada-application";
 
 const statusLabels = {
   encours: { label: "En cours", className: "bg-green-100 text-green-700" },
@@ -31,6 +33,7 @@ export function ScholarshipCard({
           <span className={`rounded-full px-3 py-1 text-xs font-semibold ${status.className}`}>
             {status.label}
           </span>
+          <ScholarshipApplicationBadge scholarship={scholarship} />
           {match?.matches && (
             <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
               Compatible {match.score}%
@@ -60,6 +63,12 @@ export function ScholarshipCard({
           <dt className="font-medium text-foreground/70">Date de clôture :</dt>
           <dd className="text-muted">{formatDate(scholarship.dateCloture)}</dd>
         </div>
+        {scholarship.valeurFinanciere && (
+          <div className="flex gap-2">
+            <dt className="font-medium text-foreground/70">Valeur :</dt>
+            <dd className="text-muted">{scholarship.valeurFinanciere}</dd>
+          </div>
+        )}
       </dl>
 
       <div className="mt-4">
@@ -88,7 +97,7 @@ export function ScholarshipCard({
         rel="noopener noreferrer"
         className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-aksanti-red hover:underline"
       >
-        Lien officiel pour candidater →
+        {getScholarshipOfficialLinkLabel(scholarship)}
       </a>
     </article>
   );
@@ -105,16 +114,24 @@ export function ScholarshipCardCompact({ scholarship }: { scholarship: Scholarsh
         <h3 className="min-w-0 flex-1 break-words font-bold leading-snug text-foreground group-hover:text-aksanti-red">
           {scholarship.nom}
         </h3>
-        <span
-          className={`shrink-0 self-start rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${status.className}`}
-        >
-          {status.label}
-        </span>
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          <span
+            className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${status.className}`}
+          >
+            {status.label}
+          </span>
+          <ScholarshipApplicationBadge scholarship={scholarship} />
+        </div>
       </div>
       <p className="mt-1 break-words text-sm text-muted">{scholarship.paysHote}</p>
       <p className="mt-2 break-words text-xs text-muted">
         {scholarship.niveauDisponible.join(" · ")}
       </p>
+      {(scholarship.valeurFinanciere || scholarship.province) && (
+        <p className="mt-1 break-words text-xs text-muted/80">
+          {[scholarship.province, scholarship.valeurFinanciere].filter(Boolean).join(" · ")}
+        </p>
+      )}
       {(scholarship.languesRequises?.length ||
         scholarship.langueEnseignement ||
         scholarship.communaute ||
