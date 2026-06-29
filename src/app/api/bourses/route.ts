@@ -18,6 +18,7 @@ import { NextResponse } from "next/server";
  * - q            : recherche texte (nom, pays, niveaux, avantages)
  * - pays         : filtre par pays hôte
  * - cycle        : undergraduate | master | doctorate
+ * - nationalite  : filtre éligibilité (ex. RDC, Congo, Sénégal)
  */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -29,6 +30,7 @@ export async function GET(request: Request) {
   const includeMatch = searchParams.get("includeMatch") === "true";
   const q = searchParams.get("q") ?? undefined;
   const pays = searchParams.get("pays") ?? undefined;
+  const nationalite = searchParams.get("nationalite") ?? undefined;
   const cycleParam = searchParams.get("cycle");
   const cycle =
     cycleParam === "undergraduate" ||
@@ -53,6 +55,7 @@ export async function GET(request: Request) {
     q,
     pays,
     cycle,
+    nationalite,
   });
 
   const response: BoursesListResponse = { data, meta };

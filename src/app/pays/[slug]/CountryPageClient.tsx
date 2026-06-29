@@ -2,7 +2,10 @@
 
 import { BourseSearchFilters } from "@/components/BourseSearchFilters";
 import { CountryFlag } from "@/components/CountryFlag";
-import { ScholarshipCardCompact } from "@/components/ScholarshipCard";
+import {
+  ScholarshipResultsGrid,
+  ScholarshipResultsSkeleton,
+} from "@/components/ScholarshipResultsGrid";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
 import { getCountrySummary } from "@/lib/bourses/countries";
@@ -20,15 +23,28 @@ const PUBLIC_SORT_OPTIONS: BourseSortOption[] = ["date_asc", "date_desc", "name_
 
 export function CountryPageClient({ country }: { country: string | null }) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [nationaliteFilter, setNationaliteFilter] = useState("");
   const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
   const [sortBy, setSortBy] = useState<BourseSortOption>("date_asc");
 
-  const { bourses, loading, error } = useBourses(country ? { pays: country } : {});
+  const { bourses, loading, error } = useBourses(
+    country
+      ? {
+          pays: country,
+          ...(country === "France" && nationaliteFilter.trim()
+            ? { nationalite: nationaliteFilter.trim() }
+            : {}),
+        }
+      : {},
+  );
 
   const filtered = useMemo(() => {
     const list = filterScholarshipsBySearch(bourses, {
       query: searchQuery,
       cycle: cycleFilter,
+      ...(country === "France" && nationaliteFilter.trim()
+        ? { nationalite: nationaliteFilter.trim() }
+        : {}),
     });
     const publicSort: "date_asc" | "date_desc" | "name_asc" = PUBLIC_SORT_OPTIONS.includes(
       sortBy,
@@ -40,6 +56,7 @@ export function CountryPageClient({ country }: { country: string | null }) {
 
   const resetSearch = () => {
     setSearchQuery("");
+    setNationaliteFilter("");
     setCycleFilter("all");
     setSortBy("date_asc");
   };
@@ -56,17 +73,21 @@ export function CountryPageClient({ country }: { country: string | null }) {
     );
   }
 
-  const hasFilters = hasActiveBourseFilters({ query: searchQuery, cycle: cycleFilter });
+  const hasFilters = hasActiveBourseFilters({
+    query: searchQuery,
+    cycle: cycleFilter,
+    nationalite: country === "France" ? nationaliteFilter : undefined,
+  });
 
   return (
-    <div>
+    <div className="min-w-0">
       <Link href="/pays" className="text-sm font-semibold text-aksanti-red hover:underline">
         ← Tous les pays
       </Link>
       <div className="mt-4 flex flex-wrap items-center gap-4">
-        <CountryFlag country={country} size="lg" />
-        <div>
-          <h1 className="text-3xl font-extrabold text-foreground">
+        <CountryFlag country={country} size="lg" className="shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h1 className="break-words text-2xl font-extrabold text-foreground sm:text-3xl">
             Bourses pour étudier en {country}
           </h1>
           <p className="mt-1 text-sm text-muted">
@@ -88,15 +109,18 @@ export function CountryPageClient({ country }: { country: string | null }) {
         variant="public"
         hidePays
         showSort
+        showNationalite={country === "France"}
         query={searchQuery}
         pays="all"
         cycle={cycleFilter}
+        nationalite={nationaliteFilter}
         countries={[]}
         resultCount={filtered.length}
         sortBy={PUBLIC_SORT_OPTIONS.includes(sortBy) ? sortBy : "date_asc"}
         onQueryChange={setSearchQuery}
         onPaysChange={() => {}}
         onCycleChange={setCycleFilter}
+        onNationaliteChange={setNationaliteFilter}
         onSortChange={(value) => {
           if (PUBLIC_SORT_OPTIONS.includes(value)) setSortBy(value);
         }}
@@ -112,34 +136,18 @@ export function CountryPageClient({ country }: { country: string | null }) {
       </div>
 
       {loading ? (
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-32 animate-pulse rounded-2xl bg-white" />
-          ))}
-        </div>
-      ) : filtered.length > 0 ? (
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((s) => (
-            <ScholarshipCardCompact key={s.id} scholarship={s} />
-          ))}
-        </div>
+        <ScholarshipResultsSkeleton count={6} />
       ) : (
-        <div className="mt-8 text-center">
-          <p className="text-muted">
-            {hasFilters
+        <ScholarshipResultsGrid
+          scholarships={filtered}
+          emptyMessage={
+            hasFilters
               ? "Aucune bourse ne correspond à votre recherche pour ce pays."
-              : "Aucune bourse cataloguée pour ce pays pour le moment."}
-          </p>
-          {hasFilters && (
-            <button
-              type="button"
-              onClick={resetSearch}
-              className="mt-3 text-sm font-semibold text-aksanti-red hover:underline"
-            >
-              Réinitialiser les filtres
-            </button>
-          )}
-        </div>
+              : "Aucune bourse cataloguée pour ce pays pour le moment."
+          }
+          onReset={resetSearch}
+          showReset={hasFilters}
+        />
       )}
     </div>
   );

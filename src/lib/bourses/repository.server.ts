@@ -14,9 +14,11 @@ import type { BourseRepositoryQuery } from "./types";
 import { FEATURED_SCHOLARSHIP_IDS } from "@/lib/data/scholarships";
 import { filterOpenScholarships, withResolvedStatus } from "./scholarship-lifecycle";
 import { getChinaScholarshipsFilePath } from "./sync/china-storage";
+import { getFranceScholarshipsFilePath } from "./sync/france-storage";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = getChinaScholarshipsFilePath();
+const FRANCE_FILE = getFranceScholarshipsFilePath();
 
 function readJsonScholarships(filePath: string): Scholarship[] {
   try {
@@ -37,11 +39,16 @@ export function readChinaFromDisk(): Scholarship[] {
   return readJsonScholarships(CHINA_FILE);
 }
 
+export function readFranceFromDisk(): Scholarship[] {
+  return readJsonScholarships(FRANCE_FILE);
+}
+
 export function loadAllScholarshipsServer(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
     readSyncedFromDisk(),
     readChinaFromDisk(),
+    readFranceFromDisk(),
   ]).map((s) => withResolvedStatus(s));
 }
 
@@ -67,6 +74,7 @@ export function listBoursesServer(query: BourseRepositoryQuery = {}): Scholarshi
     query: query.q,
     pays: query.pays,
     cycle: query.cycle,
+    nationalite: query.nationalite,
   });
 
   return results.sort((a, b) => a.dateCloture.localeCompare(b.dateCloture));

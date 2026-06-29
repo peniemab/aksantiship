@@ -14,6 +14,7 @@ function toSearchParams(params: BoursesQueryParams): string {
   if (params.q) sp.set("q", params.q);
   if (params.pays) sp.set("pays", params.pays);
   if (params.cycle) sp.set("cycle", params.cycle);
+  if (params.nationalite) sp.set("nationalite", params.nationalite);
   return sp.toString();
 }
 

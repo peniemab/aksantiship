@@ -2,7 +2,7 @@
 
 import { BourseSearchFilters } from "@/components/BourseSearchFilters";
 import { CountryExplorerGrid } from "@/components/CountryExplorerGrid";
-import { ScholarshipCardCompact } from "@/components/ScholarshipCard";
+import { ScholarshipResultsGrid, ScholarshipResultsSkeleton } from "@/components/ScholarshipResultsGrid";
 import { Alert } from "@/components/ui/Form";
 import { useBourses } from "@/hooks/useBourses";
 import {
@@ -159,7 +159,7 @@ export function HomeContent() {
       </section>
 
       <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-extrabold text-foreground">
             {hasFilters ? "Résultats de recherche" : "Toutes les bourses disponibles"}
           </h2>
@@ -191,28 +191,13 @@ export function HomeContent() {
           )}
 
           {loading ? (
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: Math.min(9, totalBourses || 9) }).map((_, i) => (
-                <div key={i} className="h-32 animate-pulse rounded-2xl bg-surface" />
-              ))}
-            </div>
-          ) : displayed.length > 0 ? (
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {displayed.map((s) => (
-                <ScholarshipCardCompact key={s.id} scholarship={s} />
-              ))}
-            </div>
+            <ScholarshipResultsSkeleton count={9} />
           ) : (
-            <div className="mt-10 text-center">
-              <p className="text-muted">Aucune bourse ne correspond à votre recherche.</p>
-              <button
-                type="button"
-                onClick={resetSearch}
-                className="mt-3 text-sm font-semibold text-aksanti-red hover:underline"
-              >
-                Réinitialiser les filtres
-              </button>
-            </div>
+            <ScholarshipResultsGrid
+              scholarships={displayed}
+              onReset={resetSearch}
+              showReset={hasFilters}
+            />
           )}
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">

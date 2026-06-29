@@ -18,6 +18,7 @@ async function main() {
   console.log(`  RSS recuperes     : ${report.rssFetched}`);
   console.log(`  Nouveaux RSS      : ${report.rssAdded}`);
   console.log(`  CUCAS Chine       : ${report.chinaStored} (intensite: ${report.chinaSyncIntensity})`);
+  console.log(`  Campus France     : ${report.franceStored} (intensite: ${report.franceSyncIntensity})`);
   console.log(`  Fichier sync RSS  : ${report.syncedStored}`);
   console.log(`  TOTAL catalogue   : ${report.grandTotal}`);
   console.log(`  TOTAL ouvertes    : ${report.grandTotalOpen}`);

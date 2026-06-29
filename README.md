@@ -46,7 +46,8 @@ Pas de base de données pour le moment. Auth, profils et sessions sont stockés 
 ## Lancer le projet en local
 
 ```bash
-
+npm install
+npm run dev
 ```
 
 Ouvre [http://localhost:3000](http://localhost:3000).
@@ -54,10 +55,59 @@ Ouvre [http://localhost:3000](http://localhost:3000).
 ### Autres commandes
 
 ```bash
-npm run build   # build production
-npm run start   # serveur production
-npm run lint    # eslint
+npm run build          # build production
+npm run start          # serveur production
+npm run lint           # eslint
+npm run sync:bourses   # RSS + Chine (calendrier automatique)
+npm run sync:china     # Chine partielle (~3500 bourses)
+npm run sync:china:full   # Catalogue CUCAS complet (~11 470 bourses)
+npm run sync:france       # Campus France (~380 programmes)
 ```
+
+---
+
+## Synchronisation des bourses (maintenance annuelle)
+
+Les bourses sont stockées dans `data/` et mises à jour par des scripts, pas à la main.
+
+| Fichier | Contenu |
+|---------|---------|
+| `data/china-cucas-scholarships.json` | Bourses Chine (CUCAS) |
+| `data/france-campusfrance-scholarships.json` | Bourses France (CampusBourses) |
+| `data/scholarships-synced.json` | Bourses RSS internationales |
+
+### France (CampusBourses — ~380 programmes)
+
+Relancer **chaque année**, surtout **octobre–janvier** (Eiffel, programmes d'excellence) :
+
+```bash
+npm run sync:france
+```
+
+Puis committer :
+
+```bash
+git add data/france-campusfrance-scholarships.json
+git commit -m "Mettre à jour le catalogue des bourses France"
+```
+
+Les dates `endAt` viennent de Campus France. Les bourses expirées sont masquées automatiquement.
+
+### Chine (à relancer chaque année, surtout décembre–mars)
+
+```bash
+npm run sync:china:full
+```
+
+Puis committer :
+
+### RSS + calendrier automatique
+
+```bash
+npm run sync:bourses
+```
+
+En production, planifier via cron : `GET /api/cron/sync-bourses` (header `Authorization: Bearer CRON_SECRET`).
 
 ---
 
@@ -121,7 +171,9 @@ GET /api/bourses?niveauEtudes=finaliste&matchOnly=true&includeMatch=true
 - [ ] Back-office admin pour ajouter/modifier les bourses sans toucher au code
 - [ ] Vrai envoi d'emails (confirmation, reset mdp)
 - [ ] Passerelle de paiement (Mobile Money, etc.)
-- [ ] Enrichir le catalogue de bourses (objectif : 500+ mises à jour régulièrement)
+- [x] Enrichir le catalogue Chine via CUCAS (~9 000+ bourses)
+- [ ] Sync dédiée **Turquie** (Türkiye Bursları, prochain pays prioritaire)
+- [ ] Sync **France** (Campus France / programmes francophones)
 
 ---
 

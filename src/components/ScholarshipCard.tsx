@@ -99,18 +99,20 @@ export function ScholarshipCardCompact({ scholarship }: { scholarship: Scholarsh
   return (
     <Link
       href={getCountryHref(scholarship.paysHote)}
-      className="group block rounded-2xl border border-border bg-white p-5 transition hover:border-aksanti-red/30 hover:shadow-lg"
+      className="group block min-w-0 rounded-2xl border border-border bg-white p-5 transition hover:border-aksanti-red/30 hover:shadow-lg"
     >
-      <div className="flex items-center justify-between">
-        <h3 className="font-bold text-foreground group-hover:text-aksanti-red">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <h3 className="min-w-0 flex-1 break-words font-bold leading-snug text-foreground group-hover:text-aksanti-red">
           {scholarship.nom}
         </h3>
-        <span className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${status.className}`}>
+        <span
+          className={`shrink-0 self-start rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${status.className}`}
+        >
           {status.label}
         </span>
       </div>
-      <p className="mt-1 text-sm text-muted">{scholarship.paysHote}</p>
-      <p className="mt-2 text-xs text-muted">
+      <p className="mt-1 break-words text-sm text-muted">{scholarship.paysHote}</p>
+      <p className="mt-2 break-words text-xs text-muted">
         {scholarship.niveauDisponible.join(" · ")}
       </p>
     </Link>

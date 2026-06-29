@@ -16,8 +16,8 @@ export default async function PaysCountryPage({
   return (
     <>
       <Header />
-      <main className="flex-1 bg-surface py-10">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <main className="flex-1 overflow-x-hidden bg-surface py-10">
+        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6">
           <CountryPageClient country={country ?? null} />
         </div>
       </main>

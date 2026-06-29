@@ -6,7 +6,10 @@ import { fetchAllRssSources } from "./rss-sources";
 import { fetchCucasChinaScholarships } from "./cucas-china";
 import { getChinaSyncIntensity } from "../china-deadlines";
 import { filterOpenScholarships, withResolvedStatus } from "../scholarship-lifecycle";
+import { fetchCampusFranceScholarships } from "./campus-france";
+import { getFranceSyncIntensity } from "../france-deadlines";
 import { writeChinaScholarshipsFile } from "./china-storage";
+import { writeFranceScholarshipsFile, getFranceScholarshipsFilePath } from "./france-storage";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = path.join(process.cwd(), "data", "china-cucas-scholarships.json");
@@ -21,6 +24,9 @@ export interface SyncReport {
   chinaFetched: number;
   chinaStored: number;
   chinaSyncIntensity: string;
+  franceFetched: number;
+  franceStored: number;
+  franceSyncIntensity: string;
   grandTotal: number;
   grandTotalOpen: number;
   sources: { source: string; fetched: number; added: number; errors: string[] }[];
@@ -74,11 +80,25 @@ export function loadChinaScholarships(): Scholarship[] {
   }
 }
 
+const FRANCE_FILE = getFranceScholarshipsFilePath();
+
+export function loadFranceScholarships(): Scholarship[] {
+  try {
+    if (!existsSync(FRANCE_FILE)) return [];
+    const raw = readFileSync(FRANCE_FILE, "utf-8");
+    const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
+    return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
+  } catch {
+    return [];
+  }
+}
+
 export function loadAllScholarships(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
     loadSyncedScholarships(),
     loadChinaScholarships(),
+    loadFranceScholarships(),
   ]);
 }
 
@@ -140,6 +160,19 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     errors.push(e instanceof Error ? e.message : "Erreur sync CUCAS Chine");
   }
 
+  const franceIntensity = getFranceSyncIntensity();
+  let franceFetched = 0;
+  let franceStored = 0;
+
+  try {
+    const franceScholarships = await fetchCampusFranceScholarships();
+    franceFetched = franceScholarships.length;
+    writeFranceScholarshipsFile(franceScholarships);
+    franceStored = franceScholarships.length;
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Erreur sync Campus France");
+  }
+
   const all = loadAllScholarships();
   const open = filterOpenScholarships(all.map((s) => withResolvedStatus(s)));
 
@@ -147,7 +180,9 @@ export async function runScholarshipSync(): Promise<SyncReport> {
   const rssAdded = newFromRss.length;
 
   return {
-    ok: (rssResults.every((r) => r.errors.length === 0) || rssAdded > 0) && chinaStored > 0,
+    ok:
+      (rssResults.every((r) => r.errors.length === 0) || rssAdded > 0) &&
+      (chinaStored > 0 || franceStored > 0),
     syncedAt: new Date().toISOString(),
     curatedTotal: curated.length,
     rssFetched,
@@ -156,6 +191,9 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     chinaFetched,
     chinaStored,
     chinaSyncIntensity: chinaIntensity,
+    franceFetched,
+    franceStored,
+    franceSyncIntensity: franceIntensity,
     grandTotal: all.length,
     grandTotalOpen: open.length,
     sources: [
@@ -170,6 +208,12 @@ export async function runScholarshipSync(): Promise<SyncReport> {
         fetched: chinaFetched,
         added: chinaStored,
         errors: errors.filter((e) => e.includes("CUCAS")),
+      },
+      {
+        source: "campusfrance",
+        fetched: franceFetched,
+        added: franceStored,
+        errors: errors.filter((e) => e.includes("Campus France")),
       },
     ],
     errors,

@@ -91,6 +91,10 @@ export interface Scholarship {
   source?: string;
   /** Date de dernière synchronisation (ISO) */
   syncedAt?: string;
+  /** Nationalités éligibles (Campus France, etc.) */
+  nationalitesEligibles?: string[];
+  /** IDs nationalités (Campus France countryListId) */
+  nationalitesEligiblesIds?: string[];
 }
 
 export interface AccompanimentRequest {

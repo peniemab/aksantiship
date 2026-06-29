@@ -9,7 +9,8 @@
     "lint": "eslint",
     "sync:bourses": "npx tsx scripts/sync-bourses.ts",
     "sync:china": "npx tsx scripts/sync-china.ts",
-    "sync:china:full": "npx tsx scripts/sync-china.ts --full"
+    "sync:china:full": "npx tsx scripts/sync-china.ts --full",
+    "sync:france": "npx tsx scripts/sync-france.ts"
   },
   "dependencies": {
     "next": "16.2.9",

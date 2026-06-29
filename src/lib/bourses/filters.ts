@@ -1,10 +1,12 @@
 import type { Scholarship, StudyCycle } from "@/lib/types";
 import type { ScholarshipMatch } from "@/lib/matching";
+import { matchesNationalityFilter } from "@/lib/bourses/france-country-map";
 
 export interface BourseSearchFilters {
   query?: string;
   pays?: string;
   cycle?: StudyCycle | "all";
+  nationalite?: string;
 }
 
 export type BourseSortOption = "score_desc" | "date_asc" | "date_desc" | "name_asc";
@@ -21,15 +23,22 @@ export function normalizeSearchQuery(query: string): string {
 }
 
 export function filterScholarshipsBySearch<
-  T extends Pick<Scholarship, "nom" | "paysHote" | "niveauDisponible" | "avantages" | "cyclesFinances">,
+  T extends Pick<
+    Scholarship,
+    "nom" | "paysHote" | "niveauDisponible" | "avantages" | "cyclesFinances" | "nationalitesEligibles"
+  >,
 >(scholarships: T[], filters: BourseSearchFilters): T[] {
   const q = filters.query ? normalizeSearchQuery(filters.query) : "";
   const pays = filters.pays?.trim();
   const cycle = filters.cycle;
+  const nationalite = filters.nationalite?.trim();
 
   return scholarships.filter((s) => {
     if (pays && pays !== "all" && s.paysHote !== pays) return false;
     if (cycle && cycle !== "all" && !s.cyclesFinances.includes(cycle)) return false;
+    if (nationalite && !matchesNationalityFilter(s.nationalitesEligibles, nationalite)) {
+      return false;
+    }
     if (!q) return true;
 
     const haystack = [
@@ -37,6 +46,7 @@ export function filterScholarshipsBySearch<
       s.paysHote,
       ...s.niveauDisponible,
       ...s.avantages,
+      ...(s.nationalitesEligibles ?? []),
     ]
       .join(" ")
       .toLowerCase();
@@ -49,7 +59,8 @@ export function hasActiveBourseFilters(filters: BourseSearchFilters): boolean {
   return Boolean(
     filters.query?.trim() ||
       (filters.pays && filters.pays !== "all") ||
-      (filters.cycle && filters.cycle !== "all"),
+      (filters.cycle && filters.cycle !== "all") ||
+      filters.nationalite?.trim(),
   );
 }
 

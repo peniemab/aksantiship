@@ -30,6 +30,9 @@ interface BourseSearchFiltersProps {
   sortBy?: BourseSortOption;
   onSortChange?: (value: BourseSortOption) => void;
   showSort?: boolean;
+  showNationalite?: boolean;
+  nationalite?: string;
+  onNationaliteChange?: (value: string) => void;
 }
 
 export function BourseSearchFilters({
@@ -47,11 +50,15 @@ export function BourseSearchFilters({
   sortBy = "score_desc",
   onSortChange,
   showSort = false,
+  showNationalite = false,
+  nationalite = "",
+  onNationaliteChange,
 }: BourseSearchFiltersProps) {
   const hasFilters = Boolean(
     query.trim() ||
       (!hidePays && pays && pays !== "all") ||
-      (cycle && cycle !== "all"),
+      (cycle && cycle !== "all") ||
+      nationalite.trim(),
   );
 
   const subtitle =
@@ -72,11 +79,15 @@ export function BourseSearchFilters({
       </div>
 
       <div
-        className={`mt-5 grid gap-4 ${
+        className={`mt-5 grid grid-cols-1 gap-4 ${
           hidePays
             ? showSort
-              ? "sm:grid-cols-2 lg:grid-cols-4"
-              : "sm:grid-cols-2 lg:grid-cols-3"
+              ? showNationalite
+                ? "sm:grid-cols-2 lg:grid-cols-5"
+                : "sm:grid-cols-2 lg:grid-cols-4"
+              : showNationalite
+                ? "sm:grid-cols-2 lg:grid-cols-4"
+                : "sm:grid-cols-2 lg:grid-cols-3"
             : showSort
               ? "sm:grid-cols-2 lg:grid-cols-5"
               : "sm:grid-cols-2 lg:grid-cols-4"
@@ -131,6 +142,21 @@ export function BourseSearchFilters({
             ))}
           </Select>
         </div>
+
+        {showNationalite && onNationaliteChange && (
+          <div className="min-w-0">
+            <label htmlFor="bourse-nationalite" className="mb-1.5 block text-sm font-medium text-foreground">
+              Votre nationalité
+            </label>
+            <Input
+              id="bourse-nationalite"
+              type="text"
+              placeholder="Ex. RDC, Congo, Sénégal..."
+              value={nationalite}
+              onChange={(e) => onNationaliteChange(e.target.value)}
+            />
+          </div>
+        )}
 
         {showSort && onSortChange && (
           <div className="min-w-0">

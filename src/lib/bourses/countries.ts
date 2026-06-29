@@ -31,7 +31,7 @@ export const COUNTRY_SUMMARIES: Record<string, string> = {
   Japon:
     "Le Japon propose des programmes d'excellence (MEXT et autres) pour les candidats motivés à intégrer des universités de renom.",
   France:
-    "La France reste une destination phare grâce à des programmes comme Campus France, l'Eiffel et de nombreuses bourses institutionnelles.",
+    "380+ programmes sur CampusBourses (Campus France). Filtrez par nationalité : les bourses françaises dépendent souvent du pays d'origine. Pic d'ouverture octobre–janvier (Eiffel) ; quelques programmes restent ouverts en été.",
   Allemagne:
     "L'Allemagne offre des bourses DAAD et des formations de qualité, souvent en anglais ou avec année preparatoire en allemand.",
   Belgique:
