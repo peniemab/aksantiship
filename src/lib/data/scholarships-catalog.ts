@@ -264,6 +264,10 @@ export const CATALOG_SCHOLARSHIPS: Scholarship[] = [
     lienOfficiel: "https://www.vliruos.be/en/scholarships",
     status: "a_venir",
     source: "curated",
+    communaute: "Flandre",
+    langueEnseignement: "Anglais",
+    allocationMensuelle: 1150,
+    nationalitesEligibles: ["Pays en développement (dont RDC)"],
   },
   {
     id: "orange-knowledge",

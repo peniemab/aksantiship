@@ -19,6 +19,9 @@ import { NextResponse } from "next/server";
  * - pays         : filtre par pays hôte
  * - cycle        : undergraduate | master | doctorate
  * - nationalite  : filtre éligibilité (ex. RDC, Congo, Sénégal)
+ * - langue       : filtre langue requise (ex. Anglais, Allemand)
+ * - communaute   : filtre communauté belge (FWB, Flandre)
+ * - langueEnseignement : filtre langue d'enseignement (Français, Néerlandais, Anglais)
  */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -31,6 +34,9 @@ export async function GET(request: Request) {
   const q = searchParams.get("q") ?? undefined;
   const pays = searchParams.get("pays") ?? undefined;
   const nationalite = searchParams.get("nationalite") ?? undefined;
+  const langue = searchParams.get("langue") ?? undefined;
+  const communaute = searchParams.get("communaute") ?? undefined;
+  const langueEnseignement = searchParams.get("langueEnseignement") ?? undefined;
   const cycleParam = searchParams.get("cycle");
   const cycle =
     cycleParam === "undergraduate" ||
@@ -56,6 +62,9 @@ export async function GET(request: Request) {
     pays,
     cycle,
     nationalite,
+    langue,
+    communaute,
+    langueEnseignement,
   });
 
   const response: BoursesListResponse = { data, meta };

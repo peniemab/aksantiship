@@ -23,6 +23,8 @@ export interface BoursesListMeta {
     catalog: number;
     china: number;
     france: number;
+    germany: number;
+    belgium: number;
     synced: number;
   };
   countries?: string[];
@@ -47,6 +49,9 @@ export interface BoursesQueryParams {
   pays?: string;
   cycle?: StudyCycle | "all";
   nationalite?: string;
+  langue?: string;
+  communaute?: string;
+  langueEnseignement?: string;
 }
 
 export interface BourseRepositoryQuery {
@@ -57,4 +62,7 @@ export interface BourseRepositoryQuery {
   pays?: string;
   cycle?: StudyCycle | "all";
   nationalite?: string;
+  langue?: string;
+  communaute?: string;
+  langueEnseignement?: string;
 }

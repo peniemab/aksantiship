@@ -10,6 +10,12 @@ import { fetchCampusFranceScholarships } from "./campus-france";
 import { getFranceSyncIntensity } from "../france-deadlines";
 import { writeChinaScholarshipsFile } from "./china-storage";
 import { writeFranceScholarshipsFile, getFranceScholarshipsFilePath } from "./france-storage";
+import { writeGermanyScholarshipsFile, getGermanyScholarshipsFilePath } from "./germany-storage";
+import { fetchDaadGermanyScholarships } from "./daad-germany";
+import { getGermanySyncIntensity } from "../germany-deadlines";
+import { fetchBelgiumScholarships } from "./studyinbelgium";
+import { writeBelgiumScholarshipsFile, getBelgiumScholarshipsFilePath } from "./belgium-storage";
+import { getBelgiumSyncIntensity } from "../belgium-deadlines";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = path.join(process.cwd(), "data", "china-cucas-scholarships.json");
@@ -27,6 +33,12 @@ export interface SyncReport {
   franceFetched: number;
   franceStored: number;
   franceSyncIntensity: string;
+  germanyFetched: number;
+  germanyStored: number;
+  germanySyncIntensity: string;
+  belgiumFetched: number;
+  belgiumStored: number;
+  belgiumSyncIntensity: string;
   grandTotal: number;
   grandTotalOpen: number;
   sources: { source: string; fetched: number; added: number; errors: string[] }[];
@@ -81,11 +93,35 @@ export function loadChinaScholarships(): Scholarship[] {
 }
 
 const FRANCE_FILE = getFranceScholarshipsFilePath();
+const GERMANY_FILE = getGermanyScholarshipsFilePath();
+const BELGIUM_FILE = getBelgiumScholarshipsFilePath();
 
 export function loadFranceScholarships(): Scholarship[] {
   try {
     if (!existsSync(FRANCE_FILE)) return [];
     const raw = readFileSync(FRANCE_FILE, "utf-8");
+    const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
+    return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
+  } catch {
+    return [];
+  }
+}
+
+export function loadGermanyScholarships(): Scholarship[] {
+  try {
+    if (!existsSync(GERMANY_FILE)) return [];
+    const raw = readFileSync(GERMANY_FILE, "utf-8");
+    const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
+    return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
+  } catch {
+    return [];
+  }
+}
+
+export function loadBelgiumScholarships(): Scholarship[] {
+  try {
+    if (!existsSync(BELGIUM_FILE)) return [];
+    const raw = readFileSync(BELGIUM_FILE, "utf-8");
     const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
     return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
   } catch {
@@ -99,6 +135,8 @@ export function loadAllScholarships(): Scholarship[] {
     loadSyncedScholarships(),
     loadChinaScholarships(),
     loadFranceScholarships(),
+    loadGermanyScholarships(),
+    loadBelgiumScholarships(),
   ]);
 }
 
@@ -173,6 +211,32 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     errors.push(e instanceof Error ? e.message : "Erreur sync Campus France");
   }
 
+  const germanyIntensity = getGermanySyncIntensity();
+  let germanyFetched = 0;
+  let germanyStored = 0;
+
+  try {
+    const germanyScholarships = await fetchDaadGermanyScholarships();
+    germanyFetched = germanyScholarships.length;
+    writeGermanyScholarshipsFile(germanyScholarships);
+    germanyStored = germanyScholarships.length;
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Erreur sync DAAD Allemagne");
+  }
+
+  const belgiumIntensity = getBelgiumSyncIntensity();
+  let belgiumFetched = 0;
+  let belgiumStored = 0;
+
+  try {
+    const belgiumScholarships = await fetchBelgiumScholarships();
+    belgiumFetched = belgiumScholarships.length;
+    writeBelgiumScholarshipsFile(belgiumScholarships);
+    belgiumStored = belgiumScholarships.length;
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Erreur sync Belgique");
+  }
+
   const all = loadAllScholarships();
   const open = filterOpenScholarships(all.map((s) => withResolvedStatus(s)));
 
@@ -182,7 +246,7 @@ export async function runScholarshipSync(): Promise<SyncReport> {
   return {
     ok:
       (rssResults.every((r) => r.errors.length === 0) || rssAdded > 0) &&
-      (chinaStored > 0 || franceStored > 0),
+      (chinaStored > 0 || franceStored > 0 || germanyStored > 0 || belgiumStored > 0),
     syncedAt: new Date().toISOString(),
     curatedTotal: curated.length,
     rssFetched,
@@ -194,6 +258,12 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     franceFetched,
     franceStored,
     franceSyncIntensity: franceIntensity,
+    germanyFetched,
+    germanyStored,
+    germanySyncIntensity: germanyIntensity,
+    belgiumFetched,
+    belgiumStored,
+    belgiumSyncIntensity: belgiumIntensity,
     grandTotal: all.length,
     grandTotalOpen: open.length,
     sources: [
@@ -214,6 +284,18 @@ export async function runScholarshipSync(): Promise<SyncReport> {
         fetched: franceFetched,
         added: franceStored,
         errors: errors.filter((e) => e.includes("Campus France")),
+      },
+      {
+        source: "daad-germany",
+        fetched: germanyFetched,
+        added: germanyStored,
+        errors: errors.filter((e) => e.includes("DAAD")),
+      },
+      {
+        source: "studyinbelgium",
+        fetched: belgiumFetched,
+        added: belgiumStored,
+        errors: errors.filter((e) => e.includes("Belgique")),
       },
     ],
     errors,

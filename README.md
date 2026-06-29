@@ -62,6 +62,8 @@ npm run sync:bourses   # RSS + Chine (calendrier automatique)
 npm run sync:china     # Chine partielle (~3500 bourses)
 npm run sync:china:full   # Catalogue CUCAS complet (~11 470 bourses)
 npm run sync:france       # Campus France (~380 programmes)
+npm run sync:germany      # Allemagne DAAD (~163 programmes)
+npm run sync:belgium      # Belgique Study in Belgium (~40 programmes)
 ```
 
 ---
@@ -74,6 +76,9 @@ Les bourses sont stockées dans `data/` et mises à jour par des scripts, pas à
 |---------|---------|
 | `data/china-cucas-scholarships.json` | Bourses Chine (CUCAS) |
 | `data/france-campusfrance-scholarships.json` | Bourses France (CampusBourses) |
+| `data/germany-daad-scholarships.json` | Bourses Allemagne (catalogue DAAD) |
+| `data/belgium-scholarships.json` | Bourses Belgique (FWB + Flandre) |
+| `data/daad-catalog-titles.json` | Snapshot titres DAAD (fallback si site inaccessible) |
 | `data/scholarships-synced.json` | Bourses RSS internationales |
 
 ### France (CampusBourses — ~380 programmes)
@@ -92,6 +97,46 @@ git commit -m "Mettre à jour le catalogue des bourses France"
 ```
 
 Les dates `endAt` viennent de Campus France. Les bourses expirées sont masquées automatiquement.
+
+### Allemagne (DAAD — ~163 programmes)
+
+Relancer **chaque année**, surtout **juillet–octobre** (Deutschlandstipendium, fondations) et **octobre–janvier** (bourses master DAAD) :
+
+```bash
+npm run sync:germany
+```
+
+Si le site DAAD est inaccessible depuis votre réseau, le script utilise le snapshot local `data/daad-catalog-titles.json`. Pour le régénérer depuis un export HTML :
+
+```bash
+npm run sync:daad:catalog
+```
+
+Puis committer :
+
+```bash
+git add data/germany-daad-scholarships.json data/daad-catalog-titles.json
+git commit -m "Mettre à jour le catalogue des bourses Allemagne (DAAD)"
+```
+
+Sur `/pays/allemagne`, filtrez par **langue requise** (Anglais / Allemand). Les dates limites varient selon le pays d'origine — consultez toujours la fiche DAAD.
+
+### Belgique (Study in Belgium + Flandre — ~40 programmes)
+
+Relancer **chaque année**, surtout **septembre–janvier** (ARES, FWB) et **février–avril** (Master Mind, universités flamandes) :
+
+```bash
+npm run sync:belgium
+```
+
+Puis committer :
+
+```bash
+git add data/belgium-scholarships.json
+git commit -m "Mettre à jour le catalogue des bourses Belgique"
+```
+
+Sur `/pays/belgique`, filtrez par **communauté** (Wallonie-Bruxelles / Flandre) et **langue d'enseignement** (Français / Néerlandais / Anglais).
 
 ### Chine (à relancer chaque année, surtout décembre–mars)
 
@@ -172,8 +217,10 @@ GET /api/bourses?niveauEtudes=finaliste&matchOnly=true&includeMatch=true
 - [ ] Vrai envoi d'emails (confirmation, reset mdp)
 - [ ] Passerelle de paiement (Mobile Money, etc.)
 - [x] Enrichir le catalogue Chine via CUCAS (~9 000+ bourses)
+- [x] Sync **France** (Campus France / CampusBourses)
+- [x] Sync **Allemagne** (catalogue DAAD + filtres langue)
+- [x] Sync **Belgique** (Study in Belgium + Master Mind, filtres communauté/langue)
 - [ ] Sync dédiée **Turquie** (Türkiye Bursları, prochain pays prioritaire)
-- [ ] Sync **France** (Campus France / programmes francophones)
 
 ---
 

@@ -24,26 +24,49 @@ const PUBLIC_SORT_OPTIONS: BourseSortOption[] = ["date_asc", "date_desc", "name_
 export function CountryPageClient({ country }: { country: string | null }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [nationaliteFilter, setNationaliteFilter] = useState("");
+  const [langueFilter, setLangueFilter] = useState("");
+  const [communauteFilter, setCommunauteFilter] = useState("");
+  const [langueEnseignementFilter, setLangueEnseignementFilter] = useState("");
   const [cycleFilter, setCycleFilter] = useState<StudyCycle | "all">("all");
   const [sortBy, setSortBy] = useState<BourseSortOption>("date_asc");
 
-  const { bourses, loading, error } = useBourses(
-    country
-      ? {
-          pays: country,
-          ...(country === "France" && nationaliteFilter.trim()
-            ? { nationalite: nationaliteFilter.trim() }
-            : {}),
-        }
-      : {},
-  );
+  const isFrance = country === "France";
+  const isGermany = country === "Allemagne";
+  const isBelgium = country === "Belgique";
+
+  const apiFilters = useMemo(() => {
+    if (!country) return {};
+    return {
+      pays: country,
+      ...(isFrance && nationaliteFilter.trim() ? { nationalite: nationaliteFilter.trim() } : {}),
+      ...(isGermany && langueFilter.trim() ? { langue: langueFilter.trim() } : {}),
+      ...(isBelgium && communauteFilter.trim() ? { communaute: communauteFilter.trim() } : {}),
+      ...(isBelgium && langueEnseignementFilter.trim()
+        ? { langueEnseignement: langueEnseignementFilter.trim() }
+        : {}),
+    };
+  }, [
+    country,
+    isFrance,
+    isGermany,
+    isBelgium,
+    nationaliteFilter,
+    langueFilter,
+    communauteFilter,
+    langueEnseignementFilter,
+  ]);
+
+  const { bourses, loading, error } = useBourses(apiFilters);
 
   const filtered = useMemo(() => {
     const list = filterScholarshipsBySearch(bourses, {
       query: searchQuery,
       cycle: cycleFilter,
-      ...(country === "France" && nationaliteFilter.trim()
-        ? { nationalite: nationaliteFilter.trim() }
+      ...(isFrance && nationaliteFilter.trim() ? { nationalite: nationaliteFilter.trim() } : {}),
+      ...(isGermany && langueFilter.trim() ? { langue: langueFilter.trim() } : {}),
+      ...(isBelgium && communauteFilter.trim() ? { communaute: communauteFilter.trim() } : {}),
+      ...(isBelgium && langueEnseignementFilter.trim()
+        ? { langueEnseignement: langueEnseignementFilter.trim() }
         : {}),
     });
     const publicSort: "date_asc" | "date_desc" | "name_asc" = PUBLIC_SORT_OPTIONS.includes(
@@ -52,11 +75,26 @@ export function CountryPageClient({ country }: { country: string | null }) {
       ? (sortBy as "date_asc" | "date_desc" | "name_asc")
       : "date_asc";
     return sortScholarships(list, publicSort);
-  }, [bourses, searchQuery, cycleFilter, sortBy]);
+  }, [
+    bourses,
+    searchQuery,
+    cycleFilter,
+    sortBy,
+    isFrance,
+    isGermany,
+    isBelgium,
+    nationaliteFilter,
+    langueFilter,
+    communauteFilter,
+    langueEnseignementFilter,
+  ]);
 
   const resetSearch = () => {
     setSearchQuery("");
     setNationaliteFilter("");
+    setLangueFilter("");
+    setCommunauteFilter("");
+    setLangueEnseignementFilter("");
     setCycleFilter("all");
     setSortBy("date_asc");
   };
@@ -76,7 +114,10 @@ export function CountryPageClient({ country }: { country: string | null }) {
   const hasFilters = hasActiveBourseFilters({
     query: searchQuery,
     cycle: cycleFilter,
-    nationalite: country === "France" ? nationaliteFilter : undefined,
+    nationalite: isFrance ? nationaliteFilter : undefined,
+    langue: isGermany ? langueFilter : undefined,
+    communaute: isBelgium ? communauteFilter : undefined,
+    langueEnseignement: isBelgium ? langueEnseignementFilter : undefined,
   });
 
   return (
@@ -109,11 +150,17 @@ export function CountryPageClient({ country }: { country: string | null }) {
         variant="public"
         hidePays
         showSort
-        showNationalite={country === "France"}
+        showNationalite={isFrance}
+        showLangue={isGermany}
+        showCommunaute={isBelgium}
+        showLangueEnseignement={isBelgium}
         query={searchQuery}
         pays="all"
         cycle={cycleFilter}
         nationalite={nationaliteFilter}
+        langue={langueFilter}
+        communaute={communauteFilter}
+        langueEnseignement={langueEnseignementFilter}
         countries={[]}
         resultCount={filtered.length}
         sortBy={PUBLIC_SORT_OPTIONS.includes(sortBy) ? sortBy : "date_asc"}
@@ -121,6 +168,9 @@ export function CountryPageClient({ country }: { country: string | null }) {
         onPaysChange={() => {}}
         onCycleChange={setCycleFilter}
         onNationaliteChange={setNationaliteFilter}
+        onLangueChange={setLangueFilter}
+        onCommunauteChange={setCommunauteFilter}
+        onLangueEnseignementChange={setLangueEnseignementFilter}
         onSortChange={(value) => {
           if (PUBLIC_SORT_OPTIONS.includes(value)) setSortBy(value);
         }}

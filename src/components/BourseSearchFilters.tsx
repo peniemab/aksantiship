@@ -4,6 +4,9 @@ import { Input, Select } from "@/components/ui/Form";
 import { STUDY_CYCLE_LABELS } from "@/lib/education-levels";
 import {
   BOURSE_SORT_LABELS,
+  BOURSE_LANGUAGE_OPTIONS,
+  BOURSE_INSTRUCTION_LANGUAGE_OPTIONS,
+  BOURSE_COMMUNITY_OPTIONS,
   type BourseSortOption,
 } from "@/lib/bourses/filters";
 import type { StudyCycle } from "@/lib/types";
@@ -33,6 +36,16 @@ interface BourseSearchFiltersProps {
   showNationalite?: boolean;
   nationalite?: string;
   onNationaliteChange?: (value: string) => void;
+  showLangue?: boolean;
+  langue?: string;
+  onLangueChange?: (value: string) => void;
+  langueLabel?: string;
+  showCommunaute?: boolean;
+  communaute?: string;
+  onCommunauteChange?: (value: string) => void;
+  showLangueEnseignement?: boolean;
+  langueEnseignement?: string;
+  onLangueEnseignementChange?: (value: string) => void;
 }
 
 export function BourseSearchFilters({
@@ -53,12 +66,27 @@ export function BourseSearchFilters({
   showNationalite = false,
   nationalite = "",
   onNationaliteChange,
+  showLangue = false,
+  langue = "",
+  onLangueChange,
+  langueLabel = "Langue requise",
+  showCommunaute = false,
+  communaute = "",
+  onCommunauteChange,
+  showLangueEnseignement = false,
+  langueEnseignement = "",
+  onLangueEnseignementChange,
 }: BourseSearchFiltersProps) {
+  const extraFilters =
+    showNationalite || showLangue || showCommunaute || showLangueEnseignement;
   const hasFilters = Boolean(
     query.trim() ||
       (!hidePays && pays && pays !== "all") ||
       (cycle && cycle !== "all") ||
-      nationalite.trim(),
+      nationalite.trim() ||
+      langue.trim() ||
+      communaute.trim() ||
+      langueEnseignement.trim(),
   );
 
   const subtitle =
@@ -82,11 +110,11 @@ export function BourseSearchFilters({
         className={`mt-5 grid grid-cols-1 gap-4 ${
           hidePays
             ? showSort
-              ? showNationalite
-                ? "sm:grid-cols-2 lg:grid-cols-5"
+              ? extraFilters
+                ? "sm:grid-cols-2 lg:grid-cols-6"
                 : "sm:grid-cols-2 lg:grid-cols-4"
-              : showNationalite
-                ? "sm:grid-cols-2 lg:grid-cols-4"
+              : extraFilters
+                ? "sm:grid-cols-2 lg:grid-cols-5"
                 : "sm:grid-cols-2 lg:grid-cols-3"
             : showSort
               ? "sm:grid-cols-2 lg:grid-cols-5"
@@ -155,6 +183,63 @@ export function BourseSearchFilters({
               value={nationalite}
               onChange={(e) => onNationaliteChange(e.target.value)}
             />
+          </div>
+        )}
+
+        {showLangue && onLangueChange && (
+          <div className="min-w-0">
+            <label htmlFor="bourse-langue" className="mb-1.5 block text-sm font-medium text-foreground">
+              {langueLabel}
+            </label>
+            <Select
+              id="bourse-langue"
+              value={langue}
+              onChange={(e) => onLangueChange(e.target.value)}
+            >
+              {BOURSE_LANGUAGE_OPTIONS.map((opt) => (
+                <option key={opt.value || "all"} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </Select>
+          </div>
+        )}
+
+        {showCommunaute && onCommunauteChange && (
+          <div className="min-w-0">
+            <label htmlFor="bourse-communaute" className="mb-1.5 block text-sm font-medium text-foreground">
+              Communauté
+            </label>
+            <Select
+              id="bourse-communaute"
+              value={communaute}
+              onChange={(e) => onCommunauteChange(e.target.value)}
+            >
+              {BOURSE_COMMUNITY_OPTIONS.map((opt) => (
+                <option key={opt.value || "all"} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </Select>
+          </div>
+        )}
+
+        {showLangueEnseignement && onLangueEnseignementChange && (
+          <div className="min-w-0">
+            <label htmlFor="bourse-langue-enseignement" className="mb-1.5 block text-sm font-medium text-foreground">
+              Langue d&apos;enseignement
+            </label>
+            <Select
+              id="bourse-langue-enseignement"
+              value={langueEnseignement}
+              onChange={(e) => onLangueEnseignementChange(e.target.value)}
+            >
+              {BOURSE_INSTRUCTION_LANGUAGE_OPTIONS.map((opt) => (
+                <option key={opt.value || "all"} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+            </Select>
           </div>
         )}
 

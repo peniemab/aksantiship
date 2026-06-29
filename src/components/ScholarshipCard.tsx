@@ -115,6 +115,29 @@ export function ScholarshipCardCompact({ scholarship }: { scholarship: Scholarsh
       <p className="mt-2 break-words text-xs text-muted">
         {scholarship.niveauDisponible.join(" · ")}
       </p>
+      {(scholarship.languesRequises?.length ||
+        scholarship.langueEnseignement ||
+        scholarship.communaute ||
+        scholarship.allocationMensuelle) && (
+        <p className="mt-1 break-words text-xs text-muted/80">
+          {scholarship.communaute ? `${scholarship.communaute}` : null}
+          {scholarship.communaute && (scholarship.langueEnseignement || scholarship.languesRequises?.length)
+            ? " · "
+            : null}
+          {scholarship.langueEnseignement
+            ? scholarship.langueEnseignement
+            : scholarship.languesRequises?.length
+              ? scholarship.languesRequises.join(" · ")
+              : null}
+          {(scholarship.communaute || scholarship.langueEnseignement || scholarship.languesRequises?.length) &&
+          scholarship.allocationMensuelle
+            ? " · "
+            : null}
+          {scholarship.allocationMensuelle
+            ? `${scholarship.allocationMensuelle} €/mois`
+            : null}
+        </p>
+      )}
     </Link>
   );
 }

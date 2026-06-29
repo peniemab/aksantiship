@@ -95,6 +95,16 @@ export interface Scholarship {
   nationalitesEligibles?: string[];
   /** IDs nationalités (Campus France countryListId) */
   nationalitesEligiblesIds?: string[];
+  /** Langues requises (DAAD : TestDaF, TOEFL/IELTS, etc.) */
+  languesRequises?: string[];
+  /** Organisme financeur (DAAD, fondation, université…) */
+  organisme?: string;
+  /** Allocation mensuelle indicative en euros */
+  allocationMensuelle?: number;
+  /** Communauté belge (Fédération Wallonie-Bruxelles, Flandre…) */
+  communaute?: string;
+  /** Langue d'enseignement du programme */
+  langueEnseignement?: string;
 }
 
 export interface AccompanimentRequest {

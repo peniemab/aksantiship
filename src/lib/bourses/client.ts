@@ -15,6 +15,9 @@ function toSearchParams(params: BoursesQueryParams): string {
   if (params.pays) sp.set("pays", params.pays);
   if (params.cycle) sp.set("cycle", params.cycle);
   if (params.nationalite) sp.set("nationalite", params.nationalite);
+  if (params.langue) sp.set("langue", params.langue);
+  if (params.communaute) sp.set("communaute", params.communaute);
+  if (params.langueEnseignement) sp.set("langueEnseignement", params.langueEnseignement);
   return sp.toString();
 }
 

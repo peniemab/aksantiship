@@ -33,9 +33,9 @@ export const COUNTRY_SUMMARIES: Record<string, string> = {
   France:
     "380+ programmes sur CampusBourses (Campus France). Filtrez par nationalité : les bourses françaises dépendent souvent du pays d'origine. Pic d'ouverture octobre–janvier (Eiffel) ; quelques programmes restent ouverts en été.",
   Allemagne:
-    "L'Allemagne offre des bourses DAAD et des formations de qualité, souvent en anglais ou avec année preparatoire en allemand.",
+    "163+ programmes DAAD + Deutschlandstipendium et fondations (Ebert, Böll). Filtrez par langue (TestDaF / TOEFL). Dates limites variables selon votre pays d'origine — pic juillet–octobre et octobre–janvier.",
   Belgique:
-    "La Belgique propose des opportunités pour étudiants internationaux via des programmes universitaires et bourses partenaires.",
+    "40+ programmes Study in Belgium (FWB) + Master Mind (Flandre). Filtrez par communauté et langue d'enseignement. Pic sept.–janv. (ARES) puis fév.–avr. (universités flamandes).",
   Roumanie:
     "La Roumanie attire de plus en plus de candidats africains avec des bourses accessibles et un coût de vie modéré.",
   "Royaume-Uni":

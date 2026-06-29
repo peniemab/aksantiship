@@ -87,6 +87,8 @@ export const SCHOLARSHIPS: Scholarship[] = [
     ],
     lienOfficiel: "https://www.excellentia.be",
     status: "a_venir",
+    communaute: "Fédération Wallonie-Bruxelles",
+    langueEnseignement: "Français",
   },
   {
     id: "bourse-eifel",

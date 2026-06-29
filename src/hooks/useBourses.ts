@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 
 interface UseBoursesResult {
   bourses: BourseWithMatch[];
-  meta: { total: number; returned: number; matched?: number; excluded?: number; countries?: string[]; sources?: { total: number; curated: number; catalog: number; china: number; france: number; synced: number } } | null;
+  meta: { total: number; returned: number; matched?: number; excluded?: number; countries?: string[]; sources?: { total: number; curated: number; catalog: number; china: number; france: number; germany: number; belgium: number; synced: number } } | null;
   loading: boolean;
   error: string | null;
   refetch: () => void;

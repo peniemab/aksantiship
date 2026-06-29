@@ -10,7 +10,10 @@
     "sync:bourses": "npx tsx scripts/sync-bourses.ts",
     "sync:china": "npx tsx scripts/sync-china.ts",
     "sync:china:full": "npx tsx scripts/sync-china.ts --full",
-    "sync:france": "npx tsx scripts/sync-france.ts"
+    "sync:france": "npx tsx scripts/sync-france.ts",
+    "sync:germany": "npx tsx scripts/sync-germany.ts",
+    "sync:belgium": "npx tsx scripts/sync-belgium.ts",
+    "sync:daad:catalog": "npx tsx scripts/build-daad-catalog.ts"
   },
   "dependencies": {
     "next": "16.2.9",
