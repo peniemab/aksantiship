@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-06-29T11:43:10.930Z",
+  "syncedAt": "2026-06-30T16:52:35.047Z",
   "count": 380,
   "source": "campusfrance",
   "scholarships": [
@@ -27,7 +27,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00321?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Gabon"
       ],
@@ -62,118 +62,12 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01373?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
       "nationalitesEligiblesIds": [
         "75"
-      ]
-    },
-    {
-      "id": "campusfrance-1557",
-      "nom": "Bourse Admission Handicap - Montpellier Business School",
-      "paysHote": "France",
-      "cyclesFinances": [
-        "undergraduate"
-      ],
-      "niveauDisponible": [
-        "Stage / formation courte",
-        "Licence / Bachelor"
-      ],
-      "dateCloture": "2026-06-30",
-      "avantages": [
-        "Programme référencé sur CampusBourses (Campus France)",
-        "Bourses d'études de 5 000 € attribuées aux candidats les mieux classés et boursiers du CROUS (quel que soit leur échelon) et justifiant une situation de handicap (reconnaissance administrative RQTH). Hors cursus en alternance."
-      ],
-      "conditionsEligibilite": [
-        "Dernière mise à jour : 2025-07-01"
-      ],
-      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01557?lang=fr",
-      "status": "encours",
-      "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
-      "nationalitesEligibles": [],
-      "nationalitesEligiblesIds": []
-    },
-    {
-      "id": "campusfrance-1710",
-      "nom": "Bourse Egalité des Chances",
-      "paysHote": "France",
-      "cyclesFinances": [
-        "undergraduate"
-      ],
-      "niveauDisponible": [
-        "Stage / formation courte"
-      ],
-      "dateCloture": "2026-06-30",
-      "avantages": [
-        "Programme référencé sur CampusBourses (Campus France)",
-        "La Bourse Egalité des Chances est attribuée aux étudiants éligibles à une bourse CROUS."
-      ],
-      "conditionsEligibilite": [
-        "Dernière mise à jour : 2025-11-03"
-      ],
-      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01710?lang=fr",
-      "status": "encours",
-      "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
-      "nationalitesEligibles": [],
-      "nationalitesEligiblesIds": []
-    },
-    {
-      "id": "campusfrance-1302",
-      "nom": "Institut Lyfe (ex Institut Paul Bocuse) - Bourse d'excellence",
-      "paysHote": "France",
-      "cyclesFinances": [
-        "undergraduate"
-      ],
-      "niveauDisponible": [
-        "Stage / formation courte"
-      ],
-      "dateCloture": "2026-06-30",
-      "avantages": [
-        "Programme référencé sur CampusBourses (Campus France)",
-        "La volonté de l'Institut Lyfe (ex Institut Paul Bocuse) est de pouvoir rendre sa formation accessible à un plus grand nombre d'étudiants. La mise en place d'une politique de bourse a été initiée par la Fondation Institut Lyfe."
-      ],
-      "conditionsEligibilite": [
-        "Dernière mise à jour : 2025-11-03"
-      ],
-      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01302?lang=fr",
-      "status": "encours",
-      "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
-      "nationalitesEligibles": [],
-      "nationalitesEligiblesIds": []
-    },
-    {
-      "id": "campusfrance-1271",
-      "nom": "Programme de bourses d'études Ingénieur / Ingénieur",
-      "paysHote": "France",
-      "cyclesFinances": [
-        "undergraduate"
-      ],
-      "niveauDisponible": [
-        "Licence / Bachelor"
-      ],
-      "dateCloture": "2026-06-30",
-      "avantages": [
-        "Programme référencé sur CampusBourses (Campus France)",
-        "L'Ambassade de France en Tunisie met en place un nouveau programme de bourse d'études permettant le financement des mobilités d'études d'ingénieurs en France s'inscrivant dans le cadre d'une double diplomation."
-      ],
-      "conditionsEligibilite": [
-        "Nationalités éligibles : Mozambique",
-        "Dernière mise à jour : 2025-11-03"
-      ],
-      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01271?lang=fr",
-      "status": "encours",
-      "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
-      "nationalitesEligibles": [
-        "Mozambique"
-      ],
-      "nationalitesEligiblesIds": [
-        "60"
       ]
     },
     {
@@ -200,7 +94,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01686?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #229",
         "Nationalité #246"
@@ -232,7 +126,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01642?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -258,7 +152,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01080?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -284,7 +178,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01253?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #165"
       ],
@@ -314,7 +208,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01267?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Mozambique"
       ],
@@ -344,7 +238,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01738?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #169",
         "Nationalité #174",
@@ -449,7 +343,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01641?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -475,7 +369,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01633?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -501,7 +395,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01651?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -532,7 +426,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01696?lang=fr",
       "status": "encours",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Espagne"
       ],
@@ -567,7 +461,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00925?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -600,7 +494,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00264?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -633,7 +527,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01065?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Gabon"
       ],
@@ -663,7 +557,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01657?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -692,7 +586,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00268?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -722,7 +616,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00269?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -753,7 +647,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01239?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #119"
       ],
@@ -783,7 +677,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00297?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Tanzanie"
       ],
@@ -814,7 +708,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01744?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -843,7 +737,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01685?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -869,7 +763,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01269?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -899,7 +793,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00270?lang=fr",
       "status": "a_venir",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -929,7 +823,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00646?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #101"
       ],
@@ -962,7 +856,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01659?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Pays-Bas",
         "Portugal",
@@ -1046,7 +940,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01643?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -1077,7 +971,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01332?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -1107,7 +1001,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01694?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Espagne"
       ],
@@ -1137,7 +1031,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00305?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #205"
       ],
@@ -1168,7 +1062,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01316?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -1200,7 +1094,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01526?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #221"
       ],
@@ -1235,7 +1129,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00428?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #182"
       ],
@@ -1266,7 +1160,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00340?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #221"
       ],
@@ -1301,7 +1195,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01581?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #229"
       ],
@@ -1333,7 +1227,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01078?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #306"
       ],
@@ -1363,7 +1257,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01273?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -1393,7 +1287,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01535?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -1423,7 +1317,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01315?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -1453,7 +1347,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00832?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Brésil"
       ],
@@ -1483,7 +1377,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01403?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #169"
       ],
@@ -1513,7 +1407,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01405?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #169"
       ],
@@ -1543,7 +1437,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01648?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #139"
       ],
@@ -1578,7 +1472,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01184?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175",
         "Nationalité #178",
@@ -1626,7 +1520,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00988?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #145"
       ],
@@ -1656,7 +1550,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01459?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #139"
       ],
@@ -1690,7 +1584,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01314?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #140"
       ],
@@ -1722,7 +1616,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00282?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -1754,7 +1648,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00355?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #160"
       ],
@@ -1784,7 +1678,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00600?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
@@ -1814,7 +1708,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01552?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -1844,7 +1738,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01153?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -1874,7 +1768,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00148?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #264"
       ],
@@ -1904,7 +1798,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01422?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #110"
       ],
@@ -1936,7 +1830,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01606?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -1968,7 +1862,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01410?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -2000,7 +1894,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01579?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #224"
       ],
@@ -2030,7 +1924,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01438?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #160"
       ],
@@ -2060,7 +1954,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01413?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #101"
       ],
@@ -2090,7 +1984,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01536?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -2120,7 +2014,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01191?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -2150,7 +2044,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01296?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -2180,7 +2074,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00342?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -2210,7 +2104,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01295?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -2240,7 +2134,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00165?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #211"
       ],
@@ -2274,7 +2168,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01587?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #211"
       ],
@@ -2305,7 +2199,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01471?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #211"
       ],
@@ -2337,7 +2231,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00511?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Pays-Bas"
       ],
@@ -2367,7 +2261,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01597?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #213"
       ],
@@ -2397,7 +2291,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01462?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Serbie"
       ],
@@ -2427,7 +2321,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01545?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -2457,7 +2351,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01546?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -2488,7 +2382,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01524?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #213"
       ],
@@ -2518,7 +2412,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01511?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -2548,7 +2442,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01476?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -2578,7 +2472,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01475?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -2608,7 +2502,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01523?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #160"
       ],
@@ -2638,7 +2532,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01582?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #145"
       ],
@@ -2670,7 +2564,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00867?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #139"
       ],
@@ -2700,7 +2594,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01345?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
@@ -2732,7 +2626,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01513?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -2764,7 +2658,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01571?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
@@ -2794,7 +2688,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01570?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
@@ -2826,7 +2720,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00399?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #126"
       ],
@@ -2860,7 +2754,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00411?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #181"
       ],
@@ -2892,7 +2786,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00180?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #262"
       ],
@@ -2922,7 +2816,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01325?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -2948,7 +2842,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01544?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -2978,7 +2872,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01467?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -3008,7 +2902,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01201?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -3039,12 +2933,118 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01527?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
       "nationalitesEligiblesIds": [
         "178"
+      ]
+    },
+    {
+      "id": "campusfrance-1557",
+      "nom": "Bourse Admission Handicap - Montpellier Business School",
+      "paysHote": "France",
+      "cyclesFinances": [
+        "undergraduate"
+      ],
+      "niveauDisponible": [
+        "Stage / formation courte",
+        "Licence / Bachelor"
+      ],
+      "dateCloture": "2026-06-30",
+      "avantages": [
+        "Programme référencé sur CampusBourses (Campus France)",
+        "Bourses d'études de 5 000 € attribuées aux candidats les mieux classés et boursiers du CROUS (quel que soit leur échelon) et justifiant une situation de handicap (reconnaissance administrative RQTH). Hors cursus en alternance."
+      ],
+      "conditionsEligibilite": [
+        "Dernière mise à jour : 2025-07-01"
+      ],
+      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01557?lang=fr",
+      "status": "encours",
+      "source": "campusfrance",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
+      "nationalitesEligibles": [],
+      "nationalitesEligiblesIds": []
+    },
+    {
+      "id": "campusfrance-1710",
+      "nom": "Bourse Egalité des Chances",
+      "paysHote": "France",
+      "cyclesFinances": [
+        "undergraduate"
+      ],
+      "niveauDisponible": [
+        "Stage / formation courte"
+      ],
+      "dateCloture": "2026-06-30",
+      "avantages": [
+        "Programme référencé sur CampusBourses (Campus France)",
+        "La Bourse Egalité des Chances est attribuée aux étudiants éligibles à une bourse CROUS."
+      ],
+      "conditionsEligibilite": [
+        "Dernière mise à jour : 2025-11-03"
+      ],
+      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01710?lang=fr",
+      "status": "encours",
+      "source": "campusfrance",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
+      "nationalitesEligibles": [],
+      "nationalitesEligiblesIds": []
+    },
+    {
+      "id": "campusfrance-1302",
+      "nom": "Institut Lyfe (ex Institut Paul Bocuse) - Bourse d'excellence",
+      "paysHote": "France",
+      "cyclesFinances": [
+        "undergraduate"
+      ],
+      "niveauDisponible": [
+        "Stage / formation courte"
+      ],
+      "dateCloture": "2026-06-30",
+      "avantages": [
+        "Programme référencé sur CampusBourses (Campus France)",
+        "La volonté de l'Institut Lyfe (ex Institut Paul Bocuse) est de pouvoir rendre sa formation accessible à un plus grand nombre d'étudiants. La mise en place d'une politique de bourse a été initiée par la Fondation Institut Lyfe."
+      ],
+      "conditionsEligibilite": [
+        "Dernière mise à jour : 2025-11-03"
+      ],
+      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01302?lang=fr",
+      "status": "encours",
+      "source": "campusfrance",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
+      "nationalitesEligibles": [],
+      "nationalitesEligiblesIds": []
+    },
+    {
+      "id": "campusfrance-1271",
+      "nom": "Programme de bourses d'études Ingénieur / Ingénieur",
+      "paysHote": "France",
+      "cyclesFinances": [
+        "undergraduate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor"
+      ],
+      "dateCloture": "2026-06-30",
+      "avantages": [
+        "Programme référencé sur CampusBourses (Campus France)",
+        "L'Ambassade de France en Tunisie met en place un nouveau programme de bourse d'études permettant le financement des mobilités d'études d'ingénieurs en France s'inscrivant dans le cadre d'une double diplomation."
+      ],
+      "conditionsEligibilite": [
+        "Nationalités éligibles : Mozambique",
+        "Dernière mise à jour : 2025-11-03"
+      ],
+      "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01271?lang=fr",
+      "status": "encours",
+      "source": "campusfrance",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
+      "nationalitesEligibles": [
+        "Mozambique"
+      ],
+      "nationalitesEligiblesIds": [
+        "60"
       ]
     },
     {
@@ -3069,7 +3069,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00689?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3095,7 +3095,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01270?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3121,7 +3121,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01268?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3146,7 +3146,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01678?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3172,7 +3172,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01695?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Espagne"
       ],
@@ -3202,7 +3202,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01745?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda"
       ],
@@ -3231,7 +3231,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01719?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3256,7 +3256,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01477?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3285,7 +3285,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01580?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #229"
       ],
@@ -3314,7 +3314,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01117?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3339,7 +3339,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01131?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3370,7 +3370,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01746?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -3400,7 +3400,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01543?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3428,7 +3428,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00512?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Pays-Bas",
         "Royaume-Uni",
@@ -3473,7 +3473,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01040?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3498,7 +3498,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01039?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3523,7 +3523,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01038?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3548,7 +3548,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01740?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3574,7 +3574,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00163?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #212"
       ],
@@ -3603,7 +3603,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01721?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3629,7 +3629,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00162?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #212"
       ],
@@ -3662,7 +3662,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00315?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #186"
       ],
@@ -3691,7 +3691,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01479?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3716,7 +3716,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01379?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3741,7 +3741,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01726?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3772,7 +3772,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01743?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -3806,7 +3806,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00452?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #184"
       ],
@@ -3838,7 +3838,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01411?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #184"
       ],
@@ -3868,7 +3868,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00367?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #165"
       ],
@@ -3897,7 +3897,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01590?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3926,7 +3926,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01611?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -3955,7 +3955,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01725?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -3980,7 +3980,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01703?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -4006,7 +4006,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01604?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -4038,7 +4038,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01605?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -4068,7 +4068,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00140?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -4098,7 +4098,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01376?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #215"
       ],
@@ -4128,7 +4128,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01412?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #184"
       ],
@@ -4158,7 +4158,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01146?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne",
         "Brésil",
@@ -4209,7 +4209,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01093?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -4237,7 +4237,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01254?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -4267,7 +4267,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00680?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #184"
       ],
@@ -4297,7 +4297,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01538?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -4326,7 +4326,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01393?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -4354,7 +4354,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01742?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #186"
       ],
@@ -4384,7 +4384,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01741?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #186"
       ],
@@ -4414,7 +4414,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01733?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #214"
       ],
@@ -4444,7 +4444,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01731?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #214"
       ],
@@ -4474,7 +4474,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01734?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #214"
       ],
@@ -4504,7 +4504,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01528?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Amérique latine",
         "Europe hors UE",
@@ -4607,7 +4607,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01737?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -4637,7 +4637,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00139?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -4667,7 +4667,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01022?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -4699,7 +4699,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00366?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #165"
       ],
@@ -4729,7 +4729,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01718?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #214"
       ],
@@ -4759,7 +4759,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01435?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -5021,7 +5021,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01728?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #214"
       ],
@@ -5051,7 +5051,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01720?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5077,7 +5077,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01727?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Pays-Bas"
       ],
@@ -5106,7 +5106,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01137?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5131,7 +5131,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01729?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5156,7 +5156,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01126?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5186,7 +5186,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00275?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #178"
       ],
@@ -5216,7 +5216,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01730?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Soudan"
       ],
@@ -5245,7 +5245,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01125?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5273,7 +5273,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01348?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Singapour"
       ],
@@ -5303,7 +5303,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00721?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -5638,7 +5638,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00729?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5669,7 +5669,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01708?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -5940,7 +5940,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01723?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5967,7 +5967,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01161?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -5994,7 +5994,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01292?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -6019,7 +6019,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01724?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -6045,7 +6045,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01235?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -6182,7 +6182,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01628?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6213,7 +6213,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01629?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6243,7 +6243,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00058?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -6473,7 +6473,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01623?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6508,7 +6508,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01688?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6538,7 +6538,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01638?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6573,7 +6573,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01676?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6608,7 +6608,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01677?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6642,7 +6642,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01671?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6677,7 +6677,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01675?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6706,7 +6706,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00932?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -6731,7 +6731,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01722?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -6758,7 +6758,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01631?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6789,7 +6789,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00242?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6819,7 +6819,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01646?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #156"
       ],
@@ -6851,7 +6851,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01658?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -6881,7 +6881,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00164?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #212"
       ],
@@ -6913,7 +6913,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00143?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -6943,7 +6943,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01609?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #220"
       ],
@@ -6974,7 +6974,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01639?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7004,7 +7004,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01665?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7030,7 +7030,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00743?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #165"
       ],
@@ -7060,7 +7060,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01681?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7092,7 +7092,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01195?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Tanzanie"
       ],
@@ -7126,7 +7126,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01661?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7161,7 +7161,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01707?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7191,7 +7191,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01196?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Tanzanie"
       ],
@@ -7225,7 +7225,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01672?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7260,7 +7260,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01673?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7290,7 +7290,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01574?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -7531,7 +7531,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01693?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7562,7 +7562,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01650?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7591,7 +7591,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00710?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7616,7 +7616,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00712?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7641,7 +7641,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00711?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7667,7 +7667,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01617?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7692,7 +7692,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01531?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7717,7 +7717,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01534?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7742,7 +7742,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01533?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7773,7 +7773,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01674?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -7803,7 +7803,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01323?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -7833,7 +7833,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01098?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7858,7 +7858,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01663?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7884,7 +7884,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00701?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -7910,7 +7910,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01664?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #101"
       ],
@@ -7940,7 +7940,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01662?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -7971,7 +7971,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01567?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -8000,7 +8000,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01684?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8028,7 +8028,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01417?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #101"
       ],
@@ -8060,7 +8060,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01682?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8085,7 +8085,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01647?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8111,7 +8111,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00062?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8137,7 +8137,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01489?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8163,7 +8163,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01491?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8189,7 +8189,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00063?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8215,7 +8215,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00652?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8241,7 +8241,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01607?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -8271,7 +8271,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01553?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Union européenne"
       ],
@@ -8301,7 +8301,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01214?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -8684,7 +8684,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01466?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8711,7 +8711,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01494?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -8743,7 +8743,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01679?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -8772,7 +8772,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01211?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8797,7 +8797,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01212?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8822,7 +8822,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01698?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8849,7 +8849,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01492?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #127"
       ],
@@ -8880,7 +8880,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01568?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #131"
       ],
@@ -8909,7 +8909,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01500?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8934,7 +8934,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01274?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8961,7 +8961,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01218?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -8987,7 +8987,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01702?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9012,7 +9012,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01529?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9040,7 +9040,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01687?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #198"
       ],
@@ -9073,7 +9073,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00948?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #144"
       ],
@@ -9103,7 +9103,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01616?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9131,7 +9131,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01357?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -9161,7 +9161,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01624?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -9192,7 +9192,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01627?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -9221,7 +9221,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00029?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9249,7 +9249,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00797?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9274,7 +9274,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01683?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9299,7 +9299,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01520?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9324,7 +9324,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01209?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9350,7 +9350,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01630?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9375,7 +9375,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01645?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9402,7 +9402,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01165?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9428,7 +9428,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01615?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9454,7 +9454,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01180?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9479,7 +9479,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01689?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9504,7 +9504,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01653?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9533,7 +9533,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00785?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -9564,7 +9564,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01097?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -9593,7 +9593,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01602?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9619,7 +9619,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00816?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -9888,7 +9888,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01210?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -9914,7 +9914,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01401?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #127"
       ],
@@ -9944,7 +9944,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00788?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -9975,7 +9975,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01020?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -10006,7 +10006,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00946?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Afrique",
@@ -10122,7 +10122,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01644?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -10154,7 +10154,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01649?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Rwanda",
         "Nationalité #264"
@@ -10186,7 +10186,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01174?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10212,7 +10212,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01176?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10242,7 +10242,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00789?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10270,7 +10270,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00904?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10300,7 +10300,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01173?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10330,7 +10330,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01187?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10356,7 +10356,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01181?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10381,7 +10381,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01378?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10412,7 +10412,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01626?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10441,7 +10441,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01311?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10466,7 +10466,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00915?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10491,7 +10491,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01312?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10522,7 +10522,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01632?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10551,7 +10551,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01276?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10577,7 +10577,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01168?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10603,7 +10603,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01167?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10629,7 +10629,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01166?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10656,7 +10656,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01356?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10686,7 +10686,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01170?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10716,7 +10716,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01186?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10742,7 +10742,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01621?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10772,7 +10772,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01622?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10807,7 +10807,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01619?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10836,7 +10836,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01183?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10861,7 +10861,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01179?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10887,7 +10887,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01178?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10915,7 +10915,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00791?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -10945,7 +10945,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01620?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #185"
       ],
@@ -10975,7 +10975,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01614?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11001,7 +11001,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01613?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11027,7 +11027,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01612?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11053,7 +11053,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01094?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -11082,7 +11082,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01618?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11109,7 +11109,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00209?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -11138,7 +11138,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01584?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11165,7 +11165,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00208?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -11196,7 +11196,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01530?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -11226,7 +11226,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01061?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #148"
       ],
@@ -11255,7 +11255,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01308?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11282,7 +11282,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01503?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #186"
       ],
@@ -11313,7 +11313,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01121?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -11645,7 +11645,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01556?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11671,7 +11671,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01559?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11696,7 +11696,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01470?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11722,7 +11722,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01561?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11748,7 +11748,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01560?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11774,7 +11774,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01555?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11800,7 +11800,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01558?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11825,7 +11825,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01217?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -11851,7 +11851,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01107?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -12170,7 +12170,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01349?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12195,7 +12195,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01589?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12220,7 +12220,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01572?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12245,7 +12245,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00068?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12270,7 +12270,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01425?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12295,7 +12295,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01596?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12320,7 +12320,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01389?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12346,7 +12346,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01468?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175",
         "Nationalité #178",
@@ -12426,7 +12426,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01588?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #174"
       ],
@@ -12456,7 +12456,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00544?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175"
       ],
@@ -12485,7 +12485,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01419?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12510,7 +12510,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01577?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12535,7 +12535,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01194?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12560,7 +12560,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01502?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12586,7 +12586,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01148?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Angola",
@@ -12645,7 +12645,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01547?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12672,7 +12672,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01443?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12698,7 +12698,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01058?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12723,7 +12723,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00999?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12752,7 +12752,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00528?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #189"
       ],
@@ -12782,7 +12782,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01200?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12811,7 +12811,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01032?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -12841,7 +12841,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01047?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -12874,7 +12874,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01076?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #96"
       ],
@@ -12903,7 +12903,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01207?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12928,7 +12928,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01337?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12953,7 +12953,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01338?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -12978,7 +12978,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01339?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13005,7 +13005,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00531?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #189"
       ],
@@ -13034,7 +13034,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01517?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13059,7 +13059,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01516?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13086,7 +13086,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01512?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -13115,7 +13115,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01247?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13146,7 +13146,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc00034?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175",
         "Nationalité #178",
@@ -13225,7 +13225,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01508?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13252,7 +13252,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01223?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175",
         "Nationalité #178",
@@ -13343,7 +13343,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01221?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #175",
         "Nationalité #178",
@@ -13432,7 +13432,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01506?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13457,7 +13457,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01409?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13483,7 +13483,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01321?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #135"
       ],
@@ -13515,7 +13515,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01136?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13546,7 +13546,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01154?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Royaume-Uni"
       ],
@@ -13575,7 +13575,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01507?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13604,7 +13604,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01525?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #183"
       ],
@@ -13635,7 +13635,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01280?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #223"
       ],
@@ -13664,7 +13664,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01149?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13690,7 +13690,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01198?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13715,7 +13715,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01102?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13741,7 +13741,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01522?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Côte d'Ivoire",
         "Nationalité #138"
@@ -13773,7 +13773,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01227?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13798,7 +13798,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01509?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13827,7 +13827,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01434?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #224"
       ],
@@ -13857,7 +13857,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01298?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -13883,7 +13883,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01381?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Union européenne",
@@ -14215,7 +14215,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01230?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #158"
       ],
@@ -14247,7 +14247,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01297?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Nationalité #136"
       ],
@@ -14278,7 +14278,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01229?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Brésil",
         "Nationalité #119",
@@ -14332,7 +14332,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01231?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [
         "Toutes nationalités",
         "Afrique",
@@ -14455,7 +14455,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01034?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     },
@@ -14480,7 +14480,7 @@
       "lienOfficiel": "https://campusbourses.campusfrance.org/#/program/bc01138?lang=fr",
       "status": "fermee",
       "source": "campusfrance",
-      "syncedAt": "2026-06-29T11:43:08.678Z",
+      "syncedAt": "2026-06-30T16:52:33.525Z",
       "nationalitesEligibles": [],
       "nationalitesEligiblesIds": []
     }

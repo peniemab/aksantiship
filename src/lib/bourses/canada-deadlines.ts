@@ -18,6 +18,35 @@ export const EDUCANADA_URL =
 export const UDEM_BOURSES_URL =
   "https://bourses.umontreal.ca/repertoire-des-bourses/?tx_udembourses%5Bdo_search%5D=1&tx_udembourses%5Bmc%5D=&tx_udembourses%5Btp%5D%5B%5D=11";
 
+export const UBC_INTERNATIONAL_AWARDS_URL =
+  "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/";
+
+export const UOFT_INTERNATIONAL_AWARDS_URL =
+  "https://future.utoronto.ca/scholarships-international-students";
+
+export const MCGILL_ENTRANCE_URL =
+  "https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships";
+
+export const MCGILL_SPECIAL_FUNDING_URL = "https://www.mcgill.ca/studentaid/special-funding";
+
+export const MCGILL_EXTERNAL_AWARDS_URL =
+  "https://www.mcgill.ca/studentaid/special-funding/externalawards";
+
+export const ALBERTA_INTL_ENTRANCE_URL =
+  "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html";
+
+export const ALBERTA_INTL_STUDENTS_URL =
+  "https://www.ualberta.ca/en/admissions/how-to-apply/international-students-in-canada.html";
+
+export const WATERLOO_INTL_SCHOLARSHIPS_URL =
+  "https://uwaterloo.ca/future-students/financing/international-scholarships";
+
+export const ULaval_INTL_FINANCE_URL =
+  "https://www.ulaval.ca/espace-etudiant/bourses-et-aide-financiere/financement-pour-les-etudiantes-et-etudiants-de-linternational";
+
+export const ULaval_BBAF_ADMISSION_URL =
+  "https://repertoire.bbaf.ulaval.ca/bourses?keywordsSearch=false&keyWords=&onlyUlBursaries=false&admissionBursary=true&legalStatusCode=2&cycle=&faculty=&start-search=true&lessResults=false";
+
 function nextSeasonDate(month: number, day: number, from = new Date()): string {
   const year = from.getFullYear();
   const candidate = new Date(year, month - 1, day);
@@ -38,6 +67,17 @@ export function inferCanadaDeadline(
   const p = (provider ?? "").toLowerCase();
 
   if (t.includes("pearson")) return nextSeasonDate(1, 15);
+  if (t.includes("entrance scholarship") || (t.includes("entrance") && p.includes("mcgill"))) {
+    return nextSeasonDate(1, 21);
+  }
+  if (t.includes("faculty of science") && p.includes("waterloo")) return nextSeasonDate(2, 13);
+  if (t.includes("black students") && p.includes("waterloo")) return nextSeasonDate(4, 15);
+  if (
+    t.includes("international distinction") ||
+    (t.includes("president") && p.includes("alberta"))
+  ) {
+    return nextSeasonDate(1, 10);
+  }
   if (t.includes("mccall macbain") || t.includes("macbain")) return nextSeasonDate(9, 30);
   if (t.includes("bec") || t.includes("study in canada") || t.includes("études au canada")) {
     return nextSeasonDate(3, 31);
@@ -100,6 +140,8 @@ export function inferCanadaApplicationType(
   if (
     t.includes("pearson") ||
     t.includes("president") ||
+    t.includes("one-year entrance") ||
+    t.includes("automatically considered") ||
     t.includes("automatic") ||
     t.includes("à l'admission") ||
     t.includes("admission automatique") ||

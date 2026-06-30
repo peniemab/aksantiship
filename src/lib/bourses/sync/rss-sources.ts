@@ -101,17 +101,17 @@ export const RSS_FEEDS = [
   {
     id: "opportunitiesforafricans",
     url: "https://www.opportunitiesforafricans.com/feed/",
-    limit: 50,
+    limit: 100,
   },
   {
     id: "scholars4dev",
     url: "https://www.scholars4dev.com/feed/",
-    limit: 40,
+    limit: 100,
   },
   {
     id: "opportunitydesk",
     url: "https://opportunitydesk.org/feed/",
-    limit: 40,
+    limit: 100,
   },
 ] as const;
 

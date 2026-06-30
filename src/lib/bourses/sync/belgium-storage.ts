@@ -12,7 +12,7 @@ export function writeBelgiumScholarshipsFile(scholarships: Scholarship[]) {
       {
         syncedAt: new Date().toISOString(),
         count: scholarships.length,
-        source: "studyinbelgium",
+        source: "belgium-multi",
         scholarships,
       },
       null,

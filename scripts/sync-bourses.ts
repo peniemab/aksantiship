@@ -19,7 +19,10 @@ async function main() {
   console.log(`  Nouveaux RSS      : ${report.rssAdded}`);
   console.log(`  CUCAS Chine       : ${report.chinaStored} (intensite: ${report.chinaSyncIntensity})`);
   console.log(`  Campus France     : ${report.franceStored} (intensite: ${report.franceSyncIntensity})`);
-  console.log(`  Fichier sync RSS  : ${report.syncedStored}`);
+  console.log(`  DAAD Allemagne    : ${report.germanyStored} (intensite: ${report.germanySyncIntensity})`);
+  console.log(`  Belgique          : ${report.belgiumStored} (intensite: ${report.belgiumSyncIntensity})`);
+  console.log(`  Canada            : ${report.canadaStored} (intensite: ${report.canadaSyncIntensity})`);
+  console.log(`  Japon             : ${report.japanStored} (intensite: ${report.japanSyncIntensity})`);
   console.log(`  TOTAL catalogue   : ${report.grandTotal}`);
   console.log(`  TOTAL ouvertes    : ${report.grandTotalOpen}`);
 

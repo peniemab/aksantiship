@@ -1,26 +1,34 @@
 /**
- * Sync bourses Canada — ÉduCanada (curated) + répertoire UdeM.
+ * Sync bourses Canada — fédéral + portails universités (toutes provinces) + UdeM + UBC + U of T.
  * Usage : npm run sync:canada
  */
-import { fetchCanadaScholarships } from "../src/lib/bourses/sync/canada-sync";
+import { fetchCanadaScholarshipsDetailed } from "../src/lib/bourses/sync/canada-sync";
 import { writeCanadaScholarshipsFile } from "../src/lib/bourses/sync/canada-storage";
 import { resolveStatusFromDeadline } from "../src/lib/bourses/china-deadlines";
 
 async function main() {
-  console.log("Sync Canada (ÉduCanada + UdeM)...\n");
+  console.log("Sync Canada (couverture nationale)...\n");
 
-  const scholarships = await fetchCanadaScholarships();
-  writeCanadaScholarshipsFile(scholarships);
+  const result = await fetchCanadaScholarshipsDetailed();
+  writeCanadaScholarshipsFile(result.scholarships);
 
-  const open = scholarships.filter((s) => resolveStatusFromDeadline(s.dateCloture) !== "fermee");
-  const direct = scholarships.filter((s) => s.typeCandidature === "directe").length;
-  const auto = scholarships.filter((s) => s.attributionAutomatiqueAdmission).length;
-  const viaInst = scholarships.filter((s) => s.typeCandidature === "via_etablissement").length;
+  const open = result.scholarships.filter(
+    (s) => resolveStatusFromDeadline(s.dateCloture) !== "fermee",
+  );
 
-  console.log(`Terminé : ${scholarships.length} programmes`);
-  console.log(`  Directes : ${direct} · Via université : ${viaInst} · Auto à l'admission : ${auto}`);
-  console.log(`Ouverts aujourd'hui : ${open.length}`);
-  console.log(`Fichier : data/canada-scholarships.json`);
+  console.log(`Fédéral ÉduCanada     : ${result.federal}`);
+  console.log(`Portails universités  : ${result.portails}`);
+  console.log(`UdeM (scrapé)         : ${result.udem}`);
+  console.log(`UBC (scrapé)          : ${result.ubc}`);
+  console.log(`U of T (scrapé)       : ${result.utoronto}`);
+  console.log(`McGill (scrapé)     : ${result.mcgill}`);
+  console.log(`Alberta (scrapé)    : ${result.ualberta}`);
+  console.log(`Waterloo (scrapé)   : ${result.uwaterloo}`);
+  console.log(`Laval (scrapé)      : ${result.ulaval}`);
+  console.log(`Total fusionné        : ${result.merged}`);
+  console.log(`Ouverts aujourd'hui   : ${open.length}`);
+  if (result.errors.length) console.warn("Avertissements :", result.errors.join("; "));
+  console.log(`Fichier : data/canada-educanada-scholarships.json`);
 }
 
 main().catch((e) => {

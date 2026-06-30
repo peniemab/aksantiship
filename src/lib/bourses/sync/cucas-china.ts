@@ -90,33 +90,55 @@ export interface FetchCucasOptions {
   maxPages?: number;
   startPage?: number;
   delayMs?: number;
+  initialScholarships?: Scholarship[];
   onProgress?: (page: number, added: number, total: number) => void;
+  onCheckpoint?: (scholarships: Scholarship[], page: number) => void;
+  checkpointEvery?: number;
 }
 
-async function fetchCucasPage(page: number): Promise<{ nextPage: number; html: string } | null> {
+async function fetchCucasPage(page: number, retries = 4): Promise<{ nextPage: number; html: string } | null> {
   const url = `${CUCAS_BASE}/scholarship/index?cat=0&degree=0&school=0&program=&lang=0&semester=0&page=${page}`;
 
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (compatible; Aksantiship/1.0; +https://aksantiship.com)",
-      "X-Requested-With": "XMLHttpRequest",
-      Accept: "application/json",
-    },
-  });
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try {
+      const res = await fetch(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; Aksantiship/1.0; +https://aksantiship.com)",
+          "X-Requested-With": "XMLHttpRequest",
+          Accept: "application/json",
+        },
+        signal: AbortSignal.timeout(30_000),
+      });
 
-  if (!res.ok) return null;
+      if (!res.ok) {
+        if (attempt < retries) {
+          await sleep(1500 * attempt);
+          continue;
+        }
+        return null;
+      }
 
-  const json = (await res.json()) as {
-    state?: number;
-    data?: { page?: number; html?: string };
-  };
+      const json = (await res.json()) as {
+        state?: number;
+        data?: { page?: number; html?: string };
+      };
 
-  if (json.state !== 1 || !json.data?.html) return null;
+      if (json.state !== 1 || !json.data?.html) return null;
 
-  return {
-    nextPage: json.data.page ?? page + 1,
-    html: json.data.html,
-  };
+      return {
+        nextPage: json.data.page ?? page + 1,
+        html: json.data.html,
+      };
+    } catch {
+      if (attempt < retries) {
+        await sleep(2000 * attempt);
+        continue;
+      }
+      throw new Error(`CUCAS page ${page} inaccessible après ${retries} tentatives`);
+    }
+  }
+
+  return null;
 }
 
 function sleep(ms: number) {
@@ -128,9 +150,13 @@ export async function fetchCucasChinaScholarships(
   options: FetchCucasOptions = {},
 ): Promise<Scholarship[]> {
   const maxPages = options.maxPages ?? 0;
-  const delayMs = options.delayMs ?? 250;
+  const delayMs = options.delayMs ?? 350;
   const syncedAt = new Date().toISOString();
   const byId = new Map<string, Scholarship>();
+
+  for (const s of options.initialScholarships ?? []) {
+    byId.set(s.id, s);
+  }
 
   let page = options.startPage ?? 1;
   let pagesFetched = 0;
@@ -151,6 +177,11 @@ export async function fetchCucasChinaScholarships(
 
     pagesFetched += 1;
     options.onProgress?.(page, raw.length, byId.size);
+
+    const checkpointEvery = options.checkpointEvery ?? 0;
+    if (checkpointEvery > 0 && pagesFetched % checkpointEvery === 0) {
+      options.onCheckpoint?.(Array.from(byId.values()), page);
+    }
 
     page = result.nextPage;
     if (page <= pagesFetched) page = pagesFetched + 1;

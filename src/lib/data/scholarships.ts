@@ -29,26 +29,6 @@ export const SCHOLARSHIPS: Scholarship[] = [
     status: "encours",
   },
   {
-    id: "bourse-mext",
-    nom: "Bourse MEXT",
-    paysHote: "Japon",
-    cyclesFinances: ["undergraduate", "master", "doctorate"],
-    niveauDisponible: ["Licence / Bachelor", "Master", "Doctorat"],
-    dateCloture: "2026-05-31",
-    avantages: [
-      "Frais de scolarité intégralement pris en charge",
-      "Allocation mensuelle de 117 000 ¥",
-      "Billet d'avion",
-    ],
-    conditionsEligibilite: [
-      "Diplôme requis selon le niveau visé (bac pour undergraduate, licence pour master)",
-      "Âge maximum 25 ans (licence), 35 ans (master/doctorat)",
-      "Bonne santé physique et mentale",
-    ],
-    lienOfficiel: "https://www.studyinjapan.go.jp",
-    status: "encours",
-  },
-  {
     id: "roumanie-mae",
     nom: "Bourse du Ministère des Affaires Étrangères Roumain",
     paysHote: "Roumanie",
@@ -174,7 +154,7 @@ export const SCHOLARSHIPS: Scholarship[] = [
 
 export const FEATURED_SCHOLARSHIP_IDS = [
   "turkiye-burslari",
-  "bourse-mext",
+  "japan-mext-research",
   "roumanie-mae",
   "programme-excellentia",
   "bourse-eifel",

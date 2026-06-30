@@ -18,6 +18,7 @@ import { getFranceScholarshipsFilePath } from "./sync/france-storage";
 import { getGermanyScholarshipsFilePath } from "./sync/germany-storage";
 import { getBelgiumScholarshipsFilePath } from "./sync/belgium-storage";
 import { getCanadaScholarshipsFilePath } from "./sync/canada-storage";
+import { getJapanScholarshipsFilePath } from "./sync/japan-storage";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = getChinaScholarshipsFilePath();
@@ -25,6 +26,7 @@ const FRANCE_FILE = getFranceScholarshipsFilePath();
 const GERMANY_FILE = getGermanyScholarshipsFilePath();
 const BELGIUM_FILE = getBelgiumScholarshipsFilePath();
 const CANADA_FILE = getCanadaScholarshipsFilePath();
+const JAPAN_FILE = getJapanScholarshipsFilePath();
 
 function readJsonScholarships(filePath: string): Scholarship[] {
   try {
@@ -61,6 +63,10 @@ export function readCanadaFromDisk(): Scholarship[] {
   return readJsonScholarships(CANADA_FILE);
 }
 
+export function readJapanFromDisk(): Scholarship[] {
+  return readJsonScholarships(JAPAN_FILE);
+}
+
 export function loadAllScholarshipsServer(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
@@ -70,6 +76,7 @@ export function loadAllScholarshipsServer(): Scholarship[] {
     readGermanyFromDisk(),
     readBelgiumFromDisk(),
     readCanadaFromDisk(),
+    readJapanFromDisk(),
   ]).map((s) => withResolvedStatus(s));
 }
 

@@ -29,7 +29,7 @@ export const COUNTRY_SUMMARIES: Record<string, string> = {
   Turquie:
     "La Turquie accueille des milliers d'étudiants internationaux via des bourses gouvernementales couvrant frais de scolarité, logement et allocation mensuelle.",
   Japon:
-    "Le Japon propose des programmes d'excellence (MEXT et autres) pour les candidats motivés à intégrer des universités de renom.",
+    "697+ programmes : MEXT (ambassade + universités), JASSO (664 aides/exonérations Study in Japan), JPSS (140 fondations) et portails officiels. Pic avril–mai (ambassade), juin–sept. (universités), automne (fondations privées).",
   France:
     "380+ programmes sur CampusBourses (Campus France). Filtrez par nationalité : les bourses françaises dépendent souvent du pays d'origine. Pic d'ouverture octobre–janvier (Eiffel) ; quelques programmes restent ouverts en été.",
   Allemagne:

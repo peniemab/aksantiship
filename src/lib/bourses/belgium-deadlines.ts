@@ -11,8 +11,22 @@ export function getBelgiumSyncIntensity(date = new Date()): BelgiumSyncIntensity
 }
 
 export const STUDY_IN_BELGIUM_URL = "https://www.studyinbelgium.be/fr/bourses";
+export const STUDY_IN_FLANDERS_SCHOLARSHIPS_URL =
+  "https://www.studyinflanders.be/scholarships";
+export const UANTWERP_SCHOLARSHIPS_URL =
+  "https://www.uantwerpen.be/en/study/scholarships/";
+export const WALLONIE_CG_ALLOCATIONS_URL =
+  "https://www.wallonie.be/fr/demarches/beneficier-dune-allocations-detudes-dans-lenseignement-secondaire-une-haute-ecole-ou-luniversite";
+export const WALLONIE_DUO_URL =
+  "https://www.wallonie.be/fr/demarches/duo-laide-la-formation-pour-les-metiers-en-penurie-demander";
+export const UGENT_FUNDING_URL =
+  "https://www.ugent.be/prospect/en/administration/fees-funding/funding-studies.htm";
+export const KULEUVEN_SCHOLARSHIPS_URL =
+  "https://www.kuleuven.be/scholarships/year/2026-2027";
+
 export const COMMUNAUTE_FWB = "Fédération Wallonie-Bruxelles";
 export const COMMUNAUTE_FLANDRE = "Flandre";
+export const COMMUNAUTE_CG = "Communauté germanophone";
 
 function nextSeasonDate(month: number, day: number, from = new Date()): string {
   const year = from.getFullYear();
@@ -25,6 +39,11 @@ export function inferBelgiumDeadline(title: string, provider?: string): string {
   const t = title.toLowerCase();
   const p = (provider ?? "").toLowerCase();
 
+  if (t.includes("duo") && (p.includes("germanophone") || p.includes("wallonie"))) {
+    return nextSeasonDate(10, 31);
+  }
+  if (t.includes("allocation") && p.includes("germanophone")) return nextSeasonDate(10, 31);
+  if (t.includes("high potential")) return nextSeasonDate(3, 31);
   if (t.includes("master mind") || p.includes("flandre")) return nextSeasonDate(4, 1);
   if (t.includes("ares") && t.includes("master")) return nextSeasonDate(1, 15);
   if (t.includes("ares") && t.includes("stage")) return nextSeasonDate(1, 15);
@@ -80,6 +99,10 @@ export function inferBelgiumInstructionLanguage(
 ): string {
   const t = title.toLowerCase();
 
+  if (communaute === COMMUNAUTE_CG) {
+    return "Allemand";
+  }
+
   if (communaute === COMMUNAUTE_FLANDRE) {
     if (t.includes("english") || t.includes("international")) return "Anglais";
     return "Néerlandais";
@@ -95,6 +118,7 @@ export function inferBelgiumInstructionLanguage(
 export function inferBelgiumMonthlyAllowance(title: string): number | undefined {
   const t = title.toLowerCase();
   if (t.includes("ares") && (t.includes("master") || t.includes("stage"))) return 1500;
+  if (t.includes("duo")) return 350;
   if (t.includes("master mind")) return 852;
   if (t.includes("vlir")) return 1150;
   if (t.includes("excellence") && t.includes("wbi")) return 1200;

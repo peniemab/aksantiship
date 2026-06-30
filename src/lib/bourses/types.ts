@@ -26,6 +26,7 @@ export interface BoursesListMeta {
     germany: number;
     belgium: number;
     canada: number;
+    japan: number;
     synced: number;
   };
   countries?: string[];

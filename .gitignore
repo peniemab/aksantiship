@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# échantillons HTML de debug (sync / parsers)
+/data/samples/

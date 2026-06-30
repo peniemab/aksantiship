@@ -2,7 +2,8 @@ import { mkdirSync, writeFileSync } from "fs";
 import path from "path";
 import type { Scholarship } from "../../types";
 
-const CANADA_FILE = path.join(process.cwd(), "data", "canada-scholarships.json");
+/** Convention : {pays}-{source}-scholarships.json */
+const CANADA_FILE = path.join(process.cwd(), "data", "canada-educanada-scholarships.json");
 
 export function writeCanadaScholarshipsFile(scholarships: Scholarship[]) {
   mkdirSync(path.dirname(CANADA_FILE), { recursive: true });
@@ -12,7 +13,7 @@ export function writeCanadaScholarshipsFile(scholarships: Scholarship[]) {
       {
         syncedAt: new Date().toISOString(),
         count: scholarships.length,
-        source: "educanada+umontreal",
+        source: "educanada+portails+universites",
         scholarships,
       },
       null,

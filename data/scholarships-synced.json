@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-06-29T13:06:56.959Z",
-  "count": 31,
+  "syncedAt": "2026-06-30T16:52:33.510Z",
+  "count": 42,
   "scholarships": [
     {
       "id": "opportunitiesforafricans-https-www-opportunitiesforafricans-com-the-government-o",
@@ -826,6 +826,303 @@
       "status": "encours",
       "source": "opportunitydesk",
       "syncedAt": "2026-06-29T13:06:56.957Z"
+    },
+    {
+      "id": "opportunitiesforafricans-https-www-opportunitiesforafricans-com-the-undp-timbukt",
+      "nom": "The UNDP Timbuktoo Pan-African MineTech Startup Incubation Programme 2026 for African MineTech startup.",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Application Deadline: Ongoing Applications are now open for the 2026 UNDP Pan-African MineTech Startup Incubation Programme. UNDP has opened applications for African MineTech startups to join the Timbuktoo Pan-African Incubation&#8230;"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://www.opportunitiesforafricans.com/the-undp-timbuktoo-pan-african-minetech-startup-incubation-programme-2026/",
+      "status": "encours",
+      "source": "opportunitiesforafricans",
+      "syncedAt": "2026-06-30T15:57:17.390Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-30-courtney-fellowship-2027-20",
+      "nom": "Ireland Fellows Programme – Courtney Fellowship 2027/2028 (Fully-funded)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-30",
+      "avantages": [
+        "Deadline: July 26, 2026 Applications are open for the Ireland Fellows Programme – Courtney Fellowship 2027/2028. The aims of the programme are to nurture future leaders; to develop in-country capacity to achieve national Sustainable Develop"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/30/courtney-fellowship-2027-2028/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-30-ifc-women-led-business-gran",
+      "nom": "International Finance Corporation (IFC) Women-Led Business Grant 2026 (up to $750K)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-30",
+      "avantages": [
+        "Deadline: August 20, 2026 Applications are open for the IFC Women-Led Business Grant 2026. This program targets businesses founded or led by women, providing non-dilutive funding alongside leadership coaching and a global peer network. The "
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/30/ifc-women-led-business-grant-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-30-idice-startup-bridge-founde",
+      "nom": "iDICE Startup Bridge Founders Lab 2026 (up to ₦10,000,000)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-30",
+      "avantages": [
+        "Deadline: July 26, 2026 Applications are open for the iDICE Startup Bridge Founders Lab 2026. The Founders Lab programme, under the Startup Bridge initiative, is the capacity-building component of the Investment in Digital and Creative Ente"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/30/idice-startup-bridge-founders-lab-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-30-undp-timbuktoo-pan-african-",
+      "nom": "UNDP timbuktoo Pan-African MineTech Startup Incubation Programme 2026",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-30",
+      "avantages": [
+        "Deadline: On Rolling Basis Applications are open for the UNDP timbuktoo Pan-African MineTech Startup Incubation Programme 2026. The timbuktoo MineTech Hub will identify and support startups building technology to make African mining safer, "
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/30/undp-timbuktoo-pan-african-minetech-startup-incubation-programme-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-30-ifc-sme-growth-accelerator-",
+      "nom": "International Finance Corporation (IFC) SME Growth Accelerator 2026 (up to $1.5M)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-30",
+      "avantages": [
+        "Deadline: November 15, 2026 Applications are open for the IFC SME Growth Accelerator 2026. The program is designed to help small and medium enterprises scale operations, expand into new markets, and create quality jobs. It includes mentorsh"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/30/ifc-sme-growth-accelerator-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-29-lagos-agrithon-2026",
+      "nom": "Apply for the Lagos Agrithon 2026 (₦200,000,000 prize)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Deadline: July 19, 2026 Applications for the Lagos Agrithon 2026 are now open. The Lagos Agrithon 2026 is the flagship youth agrifood innovation and enterprise acceleration programme of the Lagos State Ministry of Agriculture and Food Syste"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/29/lagos-agrithon-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-29-chauncey-bailey-journalist-",
+      "nom": "Chauncey Bailey Journalist of Color Investigative Reporting Fellowship 2027",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Deadline: September 1, 2026 Applications are open for the Chauncey Bailey Journalist of Color Investigative Reporting Fellowship 2027. The yearlong program is intended to prepare and support a journalist of color for a solid career in inves"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/29/chauncey-bailey-journalist-of-color-investigative-reporting-fellowship-2027/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-29-wic-global-youth-leaders-20",
+      "nom": "World Internet Conference (WIC) Global Youth Leaders Program 2026 (Fully-funded)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Deadline: July 24, 2026 Applications are open for the World Internet Conference (WIC) Global Youth Leaders Program 2026. The Global Youth Leadership Program (GYLP) is a flagship initiative launched by the WIC in 2023. Over the past three ye"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/29/wic-global-youth-leaders-2026/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.386Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-29-ireland-fellows-programme-g",
+      "nom": "Ireland Fellows Programme Ghana 2027-2028 (Fully-funded)",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Deadline: July 26, 2026 Applications are open for the Ireland Fellows Programme Ghana 2027-2028. The Ireland Fellows Programme Ghana enables early to mid-career professionals from Ghana with leadership potential to benefit from a prestigiou"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/29/ireland-fellows-programme-ghana-2027-2028/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.387Z"
+    },
+    {
+      "id": "opportunitydesk-https-opportunitydesk-org-2026-06-29-roger-casement-fellowship-2",
+      "nom": "Ireland Fellows Programme: Roger Casement Fellowship 2027-2028",
+      "paysHote": "International",
+      "cyclesFinances": [
+        "undergraduate",
+        "master",
+        "doctorate"
+      ],
+      "niveauDisponible": [
+        "Licence / Bachelor",
+        "Master",
+        "Doctorat"
+      ],
+      "dateCloture": "2026-10-29",
+      "avantages": [
+        "Deadline: July 26, 2026 Applications are open for the Roger Casement Fellowship 2027-2028. The Roger Casement Fellowship in Human Rights honours the Irish human rights activist Roger Casement, who spent part of his early working life in Cal"
+      ],
+      "conditionsEligibilite": [
+        "Critères détaillés sur le site officiel de l'organisme.",
+        "Vérifiez les dates et l'éligibilité avant de postuler."
+      ],
+      "lienOfficiel": "https://opportunitydesk.org/2026/06/29/roger-casement-fellowship-2027-2028/",
+      "status": "encours",
+      "source": "opportunitydesk",
+      "syncedAt": "2026-06-30T15:57:18.387Z"
     }
   ]
 }

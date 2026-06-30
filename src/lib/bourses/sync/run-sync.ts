@@ -8,7 +8,10 @@ import { getChinaSyncIntensity } from "../china-deadlines";
 import { filterOpenScholarships, withResolvedStatus } from "../scholarship-lifecycle";
 import { fetchCampusFranceScholarships } from "./campus-france";
 import { getFranceSyncIntensity } from "../france-deadlines";
-import { writeChinaScholarshipsFile } from "./china-storage";
+import {
+  readChinaScholarshipsFromDisk,
+  writeChinaScholarshipsFileSafe,
+} from "./china-storage";
 import { writeFranceScholarshipsFile, getFranceScholarshipsFilePath } from "./france-storage";
 import { writeGermanyScholarshipsFile, getGermanyScholarshipsFilePath } from "./germany-storage";
 import { fetchDaadGermanyScholarships } from "./daad-germany";
@@ -19,6 +22,9 @@ import { getBelgiumSyncIntensity } from "../belgium-deadlines";
 import { fetchCanadaScholarships } from "./canada-sync";
 import { writeCanadaScholarshipsFile, getCanadaScholarshipsFilePath } from "./canada-storage";
 import { getCanadaSyncIntensity } from "../canada-deadlines";
+import { fetchJapanScholarships } from "./japan-sync";
+import { writeJapanScholarshipsFile, getJapanScholarshipsFilePath } from "./japan-storage";
+import { getJapanSyncIntensity } from "../japan-deadlines";
 
 const SYNCED_FILE = path.join(process.cwd(), "data", "scholarships-synced.json");
 const CHINA_FILE = path.join(process.cwd(), "data", "china-cucas-scholarships.json");
@@ -45,6 +51,9 @@ export interface SyncReport {
   canadaFetched: number;
   canadaStored: number;
   canadaSyncIntensity: string;
+  japanFetched: number;
+  japanStored: number;
+  japanSyncIntensity: string;
   grandTotal: number;
   grandTotalOpen: number;
   sources: { source: string; fetched: number; added: number; errors: string[] }[];
@@ -79,8 +88,10 @@ function writeSyncedFile(scholarships: Scholarship[]) {
   );
 }
 
-function writeChinaFile(scholarships: Scholarship[]) {
-  writeChinaScholarshipsFile(scholarships);
+function shouldSkipChinaSync(): boolean {
+  if (process.env.SKIP_CHINA_SYNC === "1") return true;
+  if (process.env.CHINA_SYNC_MAX_PAGES === "skip") return true;
+  return false;
 }
 
 export function loadSyncedScholarships(): Scholarship[] {
@@ -102,6 +113,7 @@ const FRANCE_FILE = getFranceScholarshipsFilePath();
 const GERMANY_FILE = getGermanyScholarshipsFilePath();
 const BELGIUM_FILE = getBelgiumScholarshipsFilePath();
 const CANADA_FILE = getCanadaScholarshipsFilePath();
+const JAPAN_FILE = getJapanScholarshipsFilePath();
 
 export function loadFranceScholarships(): Scholarship[] {
   try {
@@ -147,6 +159,17 @@ export function loadCanadaScholarships(): Scholarship[] {
   }
 }
 
+export function loadJapanScholarships(): Scholarship[] {
+  try {
+    if (!existsSync(JAPAN_FILE)) return [];
+    const raw = readFileSync(JAPAN_FILE, "utf-8");
+    const parsed = JSON.parse(raw) as { scholarships?: Scholarship[] };
+    return Array.isArray(parsed.scholarships) ? parsed.scholarships : [];
+  } catch {
+    return [];
+  }
+}
+
 export function loadAllScholarships(): Scholarship[] {
   return mergeScholarships([
     getStaticScholarships(),
@@ -156,6 +179,7 @@ export function loadAllScholarships(): Scholarship[] {
     loadGermanyScholarships(),
     loadBelgiumScholarships(),
     loadCanadaScholarships(),
+    loadJapanScholarships(),
   ]);
 }
 
@@ -198,23 +222,39 @@ export async function runScholarshipSync(): Promise<SyncReport> {
 
   const chinaIntensity = getChinaSyncIntensity();
   const chinaMaxPages = resolveChinaMaxPages();
+  const chinaPartial = chinaMaxPages > 0;
   let chinaFetched = 0;
-  let chinaStored = 0;
+  let chinaStored = readChinaScholarshipsFromDisk().length;
 
-  try {
-    const chinaScholarships = await fetchCucasChinaScholarships({
-      maxPages: chinaMaxPages,
-      onProgress: (page, added, total) => {
-        if (page % 25 === 0) {
-          console.log(`  CUCAS page ${page} (+${added}) → ${total} bourses Chine`);
-        }
-      },
-    });
-    chinaFetched = chinaScholarships.length;
-    writeChinaFile(chinaScholarships);
-    chinaStored = chinaScholarships.length;
-  } catch (e) {
-    errors.push(e instanceof Error ? e.message : "Erreur sync CUCAS Chine");
+  if (shouldSkipChinaSync()) {
+    console.log(`  CUCAS Chine : ignoré (catalogue existant conservé, ${chinaStored} bourses)`);
+  } else {
+    try {
+      const chinaScholarships = await fetchCucasChinaScholarships({
+        maxPages: chinaMaxPages,
+        onProgress: (page, added, total) => {
+          if (page % 25 === 0) {
+            console.log(`  CUCAS page ${page} (+${added}) → ${total} bourses Chine`);
+          }
+        },
+      });
+      chinaFetched = chinaScholarships.length;
+      const writeResult = writeChinaScholarshipsFileSafe(chinaScholarships, {
+        partial: chinaPartial,
+      });
+      if (writeResult === "skipped_downgrade") {
+        console.warn(
+          `  CUCAS Chine : sync partiel (${chinaFetched}) ignoré — catalogue existant (${chinaStored}) conservé. Utilisez npm run sync:china:full pour un import complet.`,
+        );
+        errors.push(
+          `Chine : sync partiel non appliqué (${chinaFetched} < ${chinaStored} existantes)`,
+        );
+      } else {
+        chinaStored = chinaScholarships.length;
+      }
+    } catch (e) {
+      errors.push(e instanceof Error ? e.message : "Erreur sync CUCAS Chine");
+    }
   }
 
   const franceIntensity = getFranceSyncIntensity();
@@ -269,6 +309,19 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     errors.push(e instanceof Error ? e.message : "Erreur sync Canada");
   }
 
+  const japanIntensity = getJapanSyncIntensity();
+  let japanFetched = 0;
+  let japanStored = 0;
+
+  try {
+    const japanScholarships = await fetchJapanScholarships();
+    japanFetched = japanScholarships.length;
+    writeJapanScholarshipsFile(japanScholarships);
+    japanStored = japanScholarships.length;
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Erreur sync Japon");
+  }
+
   const all = loadAllScholarships();
   const open = filterOpenScholarships(all.map((s) => withResolvedStatus(s)));
 
@@ -278,7 +331,7 @@ export async function runScholarshipSync(): Promise<SyncReport> {
   return {
     ok:
       (rssResults.every((r) => r.errors.length === 0) || rssAdded > 0) &&
-      (chinaStored > 0 || franceStored > 0 || germanyStored > 0 || belgiumStored > 0 || canadaStored > 0),
+      (chinaStored > 0 || franceStored > 0 || germanyStored > 0 || belgiumStored > 0 || canadaStored > 0 || japanStored > 0),
     syncedAt: new Date().toISOString(),
     curatedTotal: curated.length,
     rssFetched,
@@ -299,6 +352,9 @@ export async function runScholarshipSync(): Promise<SyncReport> {
     canadaFetched,
     canadaStored,
     canadaSyncIntensity: canadaIntensity,
+    japanFetched,
+    japanStored,
+    japanSyncIntensity: japanIntensity,
     grandTotal: all.length,
     grandTotalOpen: open.length,
     sources: [
@@ -337,6 +393,12 @@ export async function runScholarshipSync(): Promise<SyncReport> {
         fetched: canadaFetched,
         added: canadaStored,
         errors: errors.filter((e) => e.includes("Canada")),
+      },
+      {
+        source: "studyinjapan-jpss",
+        fetched: japanFetched,
+        added: japanStored,
+        errors: errors.filter((e) => e.includes("Japon")),
       },
     ],
     errors,

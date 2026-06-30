@@ -64,7 +64,11 @@ npm run sync:china:full   # Catalogue CUCAS complet (~11 470 bourses)
 npm run sync:france       # Campus France (~380 programmes)
 npm run sync:germany      # Allemagne DAAD (~163 programmes)
 npm run sync:belgium      # Belgique Study in Belgium (~40 programmes)
-npm run sync:canada       # Canada ÉduCanada + UdeM (~150 programmes)
+npm run sync:canada       # Canada — fédéral + portails + UdeM/UBC/U of T
+npm run sync:japan        # Japon Study in Japan + JPSS (~697 programmes)
+npm run sync:all          # Tous les pays (Chine conservée telle quelle)
+npm run sync:all:full     # Idem + Chine catalogue complet CUCAS (~11 470)
+npm run sync:china:full   # Chine seule — import complet CUCAS
 ```
 
 ---
@@ -73,15 +77,18 @@ npm run sync:canada       # Canada ÉduCanada + UdeM (~150 programmes)
 
 Les bourses sont stockées dans `data/` et mises à jour par des scripts, pas à la main.
 
-| Fichier | Contenu |
-|---------|---------|
-| `data/china-cucas-scholarships.json` | Bourses Chine (CUCAS) |
-| `data/france-campusfrance-scholarships.json` | Bourses France (CampusBourses) |
-| `data/germany-daad-scholarships.json` | Bourses Allemagne (catalogue DAAD) |
-| `data/belgium-scholarships.json` | Bourses Belgique (FWB + Flandre) |
-| `data/canada-scholarships.json` | Bourses Canada (ÉduCanada + UdeM) |
-| `data/daad-catalog-titles.json` | Snapshot titres DAAD (fallback si site inaccessible) |
-| `data/scholarships-synced.json` | Bourses RSS internationales |
+**Convention de nommage** : `data/{pays}-{source}-scholarships.json` — un fichier JSON par pays synchronisé, même structure partout (`syncedAt`, `count`, `source`, `scholarships[]`). Les échantillons HTML de debug vont dans `data/samples/` (ignorés par git).
+
+| Fichier | Pays | Source officielle |
+|---------|------|-------------------|
+| `data/china-cucas-scholarships.json` | Chine | CUCAS |
+| `data/france-campusfrance-scholarships.json` | France | CampusBourses |
+| `data/germany-daad-scholarships.json` | Allemagne | DAAD |
+| `data/belgium-scholarships.json` | Belgique | Study in Belgium + Flandre |
+| `data/canada-educanada-scholarships.json` | Canada | ÉduCanada + portails universités + scrapers |
+| `data/japan-studyinjapan-jpss-scholarships.json` | Japon | Study in Japan + JPSS |
+| `data/daad-catalog-titles.json` | Allemagne | Snapshot DAAD (fallback réseau) |
+| `data/scholarships-synced.json` | International | Flux RSS |
 
 ### France (CampusBourses — ~380 programmes)
 
@@ -151,7 +158,7 @@ npm run sync:canada
 Puis committer :
 
 ```bash
-git add data/canada-scholarships.json
+git add data/canada-educanada-scholarships.json
 git commit -m "Mettre à jour le catalogue des bourses Canada"
 ```
 
@@ -161,6 +168,38 @@ Sur `/pays/canada`, filtrez par **mode de candidature** :
 - Automatique à l'admission (ex. Ottawa, Toronto)
 
 Les cartes affichent un badge explicite et adaptent le libellé du lien officiel.
+
+### Japon (Study in Japan + JPSS — ~697 programmes)
+
+Relancer **chaque année**, **avril–mai** (MEXT ambassade), **juin–septembre** (MEXT universités) et **septembre–janvier** (fondations privées) :
+
+```bash
+npm run sync:japan
+```
+
+Sources fusionnées :
+- **29** programmes curatés MEXT / portails officiels
+- **664** bourses et exonérations (Study in Japan — recherche JASSO)
+- **140** fondations et collectivités (JPSS)
+
+Puis committer :
+
+```bash
+git add data/japan-studyinjapan-jpss-scholarships.json
+git commit -m "Mettre à jour le catalogue des bourses Japon"
+```
+
+### Sync global (tous les pays branchés)
+
+```bash
+npm run sync:all          # France + Allemagne + Belgique + Canada + Japon + RSS (Chine non touchée)
+npm run sync:all:full     # Idem + import complet Chine CUCAS
+npm run sync:china:full   # Mettre à jour la Chine seule (~11 470 bourses)
+```
+
+**Important :** ne lancez pas `sync:all` en pensant qu'il met à jour la Chine — il **préserve** le fichier existant. Un sync partiel CUCAS écrasait auparavant le catalogue complet ; c'est corrigé, mais il faut relancer `sync:china:full` pour restaurer les ~9 000+ bourses si le fichier a déjà été réduit.
+
+Pays avec import automatique complet : **Chine**, **France**, **Allemagne**, **Belgique**, **Canada**, **Japon**. Les autres pays du catalogue statique (`scholarships-catalog.ts`) et les flux RSS complètent la couverture internationale jusqu'à l'ajout de scrapers dédiés (ex. Turquie).
 
 ### Chine (à relancer chaque année, surtout décembre–mars)
 
@@ -245,6 +284,7 @@ GET /api/bourses?niveauEtudes=finaliste&matchOnly=true&includeMatch=true
 - [x] Sync **Allemagne** (catalogue DAAD + filtres langue)
 - [x] Sync **Belgique** (Study in Belgium + Master Mind, filtres communauté/langue)
 - [x] Sync **Canada** (ÉduCanada + UdeM, badges candidature)
+- [x] Sync **Japon** (Study in Japan 664 + JPSS 140 + MEXT curaté)
 - [ ] Sync dédiée **Turquie** (Türkiye Bursları, prochain pays prioritaire)
 
 ---

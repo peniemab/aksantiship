@@ -14,6 +14,9 @@
     "sync:germany": "npx tsx scripts/sync-germany.ts",
     "sync:belgium": "npx tsx scripts/sync-belgium.ts",
     "sync:canada": "npx tsx scripts/sync-canada.ts",
+    "sync:japan": "npx tsx scripts/sync-japan.ts",
+    "sync:all": "npx tsx scripts/sync-all.ts",
+    "sync:all:full": "npx tsx scripts/sync-all.ts -- --full",
     "sync:daad:catalog": "npx tsx scripts/build-daad-catalog.ts"
   },
   "dependencies": {
